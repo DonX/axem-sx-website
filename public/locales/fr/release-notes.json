@@ -1,0 +1,53 @@
+{
+  "metaTitle": "Notes de version",
+  "metaDesc": "Notes de version AXEM-SX 0.9 Aperçu Fondateurs — Wayland exclusif, console IA Boh-IO, administration Cockpit et paramètres axés sur la souveraineté sur openSUSE Leap 16.0.",
+  "heroHeading": "Notes de version",
+  "badgeVersion": "Version", "badgeBase": "Base", "badgeArch": "Arch",
+  "labelKnown": "Problème connu", "labelTip": "Conseil", "labelWarn": "Avertissement",
+
+  "s1Title": "Définir l'Aperçu Fondateurs",
+  "s1p": "AXEM-SX 0.9 est un aperçu quasi complet de notre vision d'une station de travail axée sur la souveraineté. Il est construit sur le code en développement d'openSUSE Leap 16.0.",
+  "s1card1Label": "Objectif", "s1card1Desc": "Tester le flux de travail Boot-to-Studio et la gestion basée sur Cockpit.",
+  "s1card2Label": "Stabilité", "s1card2Desc": "Noyau de niveau entreprise avec quelques aspects Bêta en provenance de l'amont.",
+  "s1card3Label": "Retours", "s1card3Desc": "Nous recherchons spécifiquement des rapports sur l'IA locale et Wayland sur matériel NVIDIA.",
+
+  "s2Title": "Architecture bureau — Wayland strict",
+  "s2p": "AXEM-SX 0.9 est un système Wayland pur. Nous nous sommes pleinement alignés sur la décision amont de supprimer les serveurs d'affichage hérités.",
+  "s2li1Strong": "Xorg supprimé :", "s2li1": "Aucune session X11 de repli à l'écran de connexion.",
+  "s2li2Strong": "Support applications héritées :", "s2li2": "Les anciennes applications fonctionnent de manière transparente via XWayland.",
+  "s2li3Strong": "NVIDIA Boot-to-Studio :", "s2li3": "Le pilote noyau ouvert et les pilotes espace utilisateur s'installent automatiquement sur les GPU compatibles.",
+  "s2tip": "Si vous rencontrez des écrans noirs lors de l'installation, démarrez avec l'option noyau nomodeset.",
+
+  "s3Title": "La Console Civique (Boh-IO)",
+  "s3p": "AXEM-SX introduit Boh-IO — Relier nos humanités par l'entrée et la sortie. Une console spécialisée avec un terminal Bash à gauche et un Sidecar IA local à droite.",
+  "s3li1Strong": "Local et privé :", "s3li1": "phi3:mini (3,8 milliards de paramètres) via Ollama. Aucune donnée ne quitte votre machine. L'historique n'existe qu'en RAM.",
+  "s3li2Strong": "Méta-commandes :", "s3li2": "boh explain · boh safer · boh teach · boh dry-run",
+  "s3li3Strong": "Statut en 0.9 :", "s3li3": "Aperçu actif — orienté guidance pour AXEM-SX et Linux.",
+
+  "s4Title": "Administration système — Cockpit",
+  "s4p": "Contrairement à la plupart des distributions qui ont abandonné YaST, AXEM-SX préserve et curé YaST via le Centre de contrôle AXEM-SX — vous donnant la puissance d'une couche d'administration éprouvée avec une interface raffinée, orientée station de travail, aux côtés de Cockpit.",
+  "s4li1Strong": "Accès :", "s4li1": "localhost:9090 dans votre navigateur.",
+  "s4li2Strong": "Modules :", "s4li2": "Stockage · Réseau · Journaux — curés pour les tâches de station de travail.",
+  "s4known": "Un artefact visuel (ligne grise) peut apparaître dans le menu stockage lors de l'activation de certains disques. C'est cosmétique et n'affecte pas les données.",
+
+  "s5Title": "Optimisations et correctifs pré-appliqués",
+  "s5p": "Ce sont actuellement des étapes manuelles dans Leap 16.0 de base — AXEM-SX les applique automatiquement.",
+  "s5li1Strong": "Réseau de conteneurs corrigé :", "s5li1": "Docker et KVM (libvirt) fonctionnent immédiatement côte à côte. Le backend pare-feu est forcé sur iptables pour éviter le conflit amont connu.",
+  "s5li2Strong": "Audio :", "s5li2": "PipeWire est le serveur audio par défaut — PulseAudio est entièrement remplacé.",
+  "s5li3Strong": "Réseau :", "s5li3": "NetworkManager uniquement — l'outil wicked est supprimé.",
+
+  "s6Title": "Sécurité et paramètres de confidentialité",
+  "s6li1Strong": "Connexion root désactivée :", "s6li1": "Impossible de se connecter en root via SSH avec un mot de passe. Clé SSH requise.",
+  "s6li2Strong": "SELinux en vigueur :", "s6li2": "Politique de sécurité stricte appliquée — AppArmor n'est pas la valeur par défaut.",
+  "s6li3Strong": "Pas de retour maison :", "s6li3": "Tous les services distants sont désactivés par défaut.",
+
+  "s7Title": "Configuration matérielle requise",
+  "s7li1Strong": "CPU :", "s7li1": "x86-64-v2 requis (environ post-2009).",
+  "s7li2Strong": "32 bits :", "s7li2": "Non pris en charge — AXEM-SX est strictement 64 bits.",
+  "s7li3Strong": "/tmp :", "s7li3": "Disque RAM (tmpfs) — effacé à chaque redémarrage.",
+  "s7warn": "Exécuter AXEM-SX dans une machine virtuelle sur un hôte plus ancien provoquera un plantage du noyau. Définissez le type CPU de la VM sur host-passthrough ou host-model.",
+
+  "s8Title": "Problèmes connus en aperçu",
+  "s8known1": "Config réseau installateur : Les configurations réseau complexes (agrégation) sont limitées pendant l'installation. Utilisez DHCP pour l'installation, configurez via Cockpit après.",
+  "s8known2": "Dépôt Zypper : Une mauvaise source de dépôt peut être ajoutée après l'installation. Si zypper se plaint, supprimez-la avec zypper rr 1."
+}

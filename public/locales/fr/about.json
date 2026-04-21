@@ -1,0 +1,48 @@
+{
+  "metaTitle": "À propos",
+  "metaDesc": "AXEM-SX est un système d'exploitation Linux axé sur la souveraineté, basé sur openSUSE Leap 16.0 — un environnement sobre pour un travail sérieux et durable.",
+  "heroHeading": "À propos d'",
+  "heroAccent": "AXEM-SX",
+  "heroSub": "Un système d'exploitation de station de travail axé sur la souveraineté. Conçu pour les bâtisseurs, architectes, ingénieurs et penseurs à long terme qui exigent un environnement respectueux de leur attention et de leur souveraineté numérique.",
+
+  "s1Title": "Un Linux d'une autre trempe",
+  "s1p1": "La plupart des systèmes d'exploitation cherchent à disparaître — devenant un vide sans friction de verre abstrait et de transparence. AXEM-SX adopte l'approche inverse. Nous croyons qu'une station de travail doit ressembler à un lieu.",
+  "s1p2": "Bienvenue dans AXEM-SX 0.9 (Aperçu Fondateurs). Construit sur les fondations de niveau entreprise d'openSUSE Leap 16.0, AXEM-SX est un système d'exploitation axé sur la productivité disciplinée, la souveraineté et la fiabilité à long terme.",
+  "s1quote": "Basé sur openSUSE Leap 16.0. Un environnement Linux sobre pour un travail sérieux et durable.",
+
+  "s2Title": "La Métaphore Matérielle",
+  "s2p1": "À une époque où les interfaces logicielles sont de plus en plus abstraites, plates et détachées, AXEM-SX réintroduit les métaphores matérielles.",
+  "s2p2": "L'interface Bois & Or n'est pas qu'un thème — c'est un signal d'équilibre. Les textures bois rappellent que l'informatique est une activité humaine ancrée dans le monde physique. Cette esthétique enracinée est conçue pour réduire la fatigue numérique.",
+  "s2p3": "Tout comme un charpentier respecte son établi, AXEM-SX respecte votre écran comme un espace d'artisanat, non de consommation.",
+  "s2card1Label": "Animations réduites",
+  "s2card1Desc": "Les fenêtres s'ancrent instantanément. Les transitions sont minimisées pour réduire la charge cognitive.",
+  "s2card2Label": "Contraste élevé",
+  "s2card2Desc": "Textes et éléments actifs priorisés pour la lisibilité lors de longues sessions.",
+  "s2card3Label": "Centré clavier",
+  "s2card3Desc": "Navigation rapide sans dépendance à la souris — optimisé pour l'efficacité.",
+
+  "s3Title": "La Philosophie de Souveraineté",
+  "s3intro": "AXEM-SX est bâti autour de trois piliers non négociables :",
+  "s3pillar1Name": "Souveraineté",
+  "s3pillar1Desc": "Vos données ne quittent jamais votre machine. L'IA fonctionne localement. Aucun service distant n'est pré-activé. Pas de \"retour maison\".",
+  "s3pillar2Name": "Discipline",
+  "s3pillar2Desc": "L'interface est conçue pour soutenir la concentration — pas la fragmentation. Chaque paramètre par défaut est intentionnel.",
+  "s3pillar3Name": "Fiabilité à long terme",
+  "s3pillar3Desc": "Basé sur Leap 16.0, supporté jusqu'en juillet 2034. Planifiez vos projets à long terme sans obsolescence forcée.",
+
+  "s4Title": "Pour qui ?",
+  "s4intro": "AXEM-SX n'est pas pour tout le monde — et c'est voulu.",
+  "s4item1": "Les bâtisseurs et créateurs qui considèrent leur station de travail comme un outil principal",
+  "s4item2": "Les architectes et ingénieurs qui ont besoin d'une stabilité à long terme",
+  "s4item3": "Les créateurs qui valorisent l'indépendance plutôt que la commodité",
+  "s4item4": "Ceux qui refusent l'exfiltration de données comme prix de la productivité",
+  "s4item5": "Les utilisateurs Linux prêts à dépasser la distribution généraliste",
+
+  "s5Title": "Feuille de route de localisation",
+  "s5intro": "AXEM-SX s'engage pour l'inclusion numérique. L'Atelier Numérique doit être accessible dans les langues de ceux qui en ont le plus besoin.",
+  "s5note": "Note : La localisation en créole haïtien est une déclaration délibérée d'inclusion numérique — rompant avec la localisation FIGS standard des distributions Linux.",
+  "s5lang1": "English", "s5lang1Note": "Live", "s5lang1Status": "Principal",
+  "s5lang2": "Français", "s5lang2Note": "L'atelier numérique", "s5lang2Status": "Prévu",
+  "s5lang3": "Español", "s5lang3Note": "El taller digital", "s5lang3Status": "Prévu",
+  "s5lang4": "Kreyòl Ayisyen", "s5lang4Note": "Inclusion numérique", "s5lang4Status": "Prévu"
+}

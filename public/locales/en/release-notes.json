@@ -1,0 +1,53 @@
+{
+  "metaTitle": "Release Notes",
+  "metaDesc": "AXEM-SX 0.9 Founders Preview release notes — Wayland-only, Boh-IO AI console, Cockpit administration, and sovereignty-first defaults on openSUSE Leap 16.0.",
+  "heroHeading": "Release Notes",
+  "badgeVersion": "Version", "badgeBase": "Base", "badgeArch": "Arch",
+  "labelKnown": "Known Issue", "labelTip": "Tip", "labelWarn": "Warning",
+
+  "s1Title": "Defining the Founders Preview",
+  "s1p": "AXEM-SX 0.9 is a near-complete look at our vision for a sovereignty-oriented workstation. It is built on the developing code of openSUSE Leap 16.0.",
+  "s1card1Label": "Purpose", "s1card1Desc": "Test the Boot-to-Studio workflow and Cockpit-based management.",
+  "s1card2Label": "Stability", "s1card2Desc": "Enterprise-grade core with some Beta edges from upstream.",
+  "s1card3Label": "Feedback", "s1card3Desc": "Specifically seeking reports on local AI and Wayland on NVIDIA hardware.",
+
+  "s2Title": "Desktop Architecture — Strict Wayland",
+  "s2p": "AXEM-SX 0.9 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
+  "s2li1Strong": "Xorg is Gone:", "s2li1": "No fallback X11 session at the login screen.",
+  "s2li2Strong": "Legacy App Support:", "s2li2": "Older applications run transparently via XWayland.",
+  "s2li3Strong": "NVIDIA Boot-to-Studio:", "s2li3": "Open kernel driver and user-space drivers install automatically on supported GPUs.",
+  "s2tip": "If you experience black screens during installation, boot with the nomodeset kernel option.",
+
+  "s3Title": "The Civic-Minded Console (Boh-IO)",
+  "s3p": "AXEM-SX introduces Boh-IO — Bridge Our Humanities with Input & Output. A specialized console with a Bash terminal on the left and a local AI Sidecar on the right.",
+  "s3li1Strong": "Local & Private:", "s3li1": "phi3:mini (3.8B) via Ollama. No data leaves your machine. History exists only in RAM.",
+  "s3li2Strong": "Meta-Commands:", "s3li2": "boh explain · boh safer · boh teach · boh dry-run",
+  "s3li3Strong": "Status in 0.9:", "s3li3": "Active preview — tuned for AXEM-SX and Linux command guidance.",
+
+  "s4Title": "System Administration — Cockpit",
+  "s4p": "Unlike most distributions that have dropped YaST entirely in favor of generic web tools, AXEM-SX preserves and curates YaST through the AXEM-SX Control Hub — giving you the power of a proven administration layer with a refined, workstation-focused interface alongside Cockpit.",
+  "s4li1Strong": "Access:", "s4li1": "localhost:9090 in your browser.",
+  "s4li2Strong": "Modules:", "s4li2": "Storage · Networking · Logs — curated for workstation tasks.",
+  "s4known": "A gray line visual glitch may appear in the storage menu when activating certain disks. This is cosmetic and does not affect data.",
+
+  "s5Title": "Workstation Optimizations & Pre-Applied Fixes",
+  "s5p": "These are currently manual steps in base Leap 16.0 — AXEM-SX applies them for you out of the box.",
+  "s5li1Strong": "Container Networking Fixed:", "s5li1": "Docker and KVM (libvirt) work side-by-side immediately. Firewall backend forced to iptables to prevent the known upstream conflict.",
+  "s5li2Strong": "Audio:", "s5li2": "PipeWire is the default sound server — PulseAudio fully replaced.",
+  "s5li3Strong": "Networking:", "s5li3": "NetworkManager only — the legacy wicked tool suite is removed.",
+
+  "s6Title": "Security & Privacy Defaults",
+  "s6li1Strong": "Root Login Disabled:", "s6li1": "Cannot log in as root via SSH using a password. SSH key required.",
+  "s6li2Strong": "SELinux Enforcing:", "s6li2": "Strict security policy enforced — AppArmor is not the default.",
+  "s6li3Strong": "No Phone Home:", "s6li3": "All remote services are disabled by default.",
+
+  "s7Title": "Hardware Requirements",
+  "s7li1Strong": "CPU:", "s7li1": "x86-64-v2 required (approximately post-2009).",
+  "s7li2Strong": "32-bit:", "s7li2": "Not supported — AXEM-SX is strictly 64-bit.",
+  "s7li3Strong": "/tmp:", "s7li3": "RAM disk (tmpfs) — cleared on every reboot.",
+  "s7warn": "Running AXEM-SX in a Virtual Machine on an older host will cause a kernel crash. Set the VM CPU type to host-passthrough or host-model.",
+
+  "s8Title": "Known Issues in Preview",
+  "s8known1": "Installer Network Config: Complex network setups (bonding) are limited during install. Use DHCP for installation, configure via Cockpit after.",
+  "s8known2": "Zypper Repository: A bad repository source may be added after install. If zypper complains, remove it with zypper rr 1."
+}

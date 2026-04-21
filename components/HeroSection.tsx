@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 export default function HeroSection() {
+  const { t } = useTranslation('home');
   return (
     <section
       id="home"
@@ -29,7 +31,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-6 pt-24 pb-16 gap-8">
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center px-6 pt-24 pb-16 gap-8">
 
         {/* Headline */}
         <div className="flex flex-col items-center gap-3">
@@ -37,37 +39,61 @@ export default function HeroSection() {
             AXEM-<span className="text-amber-400">SX</span>
           </h1>
           <p className="text-lg md:text-2xl font-light tracking-[0.25em] text-amber-200/80 uppercase">
-            The Digital Workshop
+            {t('hero.tagline')}
           </p>
           <div className="w-24 h-px bg-amber-400/60 my-2" />
           <p className="max-w-xl text-base md:text-lg text-white/70 leading-relaxed">
-            A refined Linux experience built for creators, makers, and thinkers.
-            Intelligent. Powerful. Distinctly crafted.
+            {t('hero.description')}
           </p>
-          <p className="mt-2 text-sm tracking-widest text-amber-300/60 uppercase font-semibold">
-            Built on openSUSE Leap 16.0 &mdash; A restrained Linux environment for sustained, serious work.
+          <p className="mt-2 text-xs tracking-wider text-amber-300/60 uppercase font-semibold max-w-xl text-center">
+            {t('hero.builtOn')}
           </p>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-2">
-          <Link
-            href="#download"
-            className="px-8 py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-widest uppercase transition-all duration-200 shadow-lg hover:shadow-amber-400/50 hover:scale-105"
-          >
-            Download Now
-          </Link>
-          <Link
-            href="#features"
-            className="px-8 py-3 rounded-full border border-amber-400/60 text-amber-200 hover:bg-amber-400/10 font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105"
-          >
-            Explore Features
-          </Link>
+        {/* CTA Buttons + Edition Breakdown */}
+        <div className="flex flex-col items-center gap-4 mt-6 w-full">
+
+          {/* Buttons row */}
+          <div className="flex flex-col sm:flex-row gap-6">
+            {/* Light Edition */}
+            <Link
+              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-light.x86_64-1.0.0.iso/download"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-16 py-7 bg-amber-500 hover:bg-amber-400 text-[#6B0F1A] font-black text-xl tracking-normal uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(201,166,95,0.3)] hover:shadow-[0_4px_36px_rgba(201,166,95,0.5)]"
+            >
+              {t('hero.downloadLight')}
+            </Link>
+            {/* Pro Edition */}
+            <Link
+              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-16 py-7 bg-[#1a1612] border-2 border-amber-400/70 hover:border-amber-400 text-amber-400 hover:text-amber-300 font-black text-xl tracking-normal uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+            >
+              {t('hero.downloadPro')}
+            </Link>
+          </div>
+
+          {/* Edition breakdown */}
+          <div className="flex flex-col sm:flex-row gap-0 w-full max-w-2xl mt-2 border border-amber-400/15 divide-y sm:divide-y-0 sm:divide-x divide-amber-400/15">
+            {/* Light */}
+            <div className="flex-1 px-6 py-4 flex flex-col gap-1 text-left">
+              <span className="text-amber-400/80 text-xs font-bold tracking-widest uppercase">{t('hero.editionLightLabel')}</span>
+              <p className="text-white/50 text-xs leading-relaxed">{t('hero.editionLightDesc')}</p>
+            </div>
+            {/* Pro */}
+            <div className="flex-1 px-6 py-4 flex flex-col gap-1 text-left">
+              <span className="text-amber-400/80 text-xs font-bold tracking-widest uppercase">{t('hero.editionProLabel')}</span>
+              <p className="text-white/50 text-xs leading-relaxed">{t('hero.editionProDesc')}</p>
+            </div>
+          </div>
+
         </div>
 
         {/* Scroll indicator */}
         <div className="mt-8 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-          <span className="text-xs tracking-widest text-amber-200 uppercase">Scroll</span>
+          <span className="text-xs tracking-widest text-amber-200 uppercase">{t('hero.scroll')}</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M5 8l5 5 5-5" stroke="#f6d860" strokeWidth="2" strokeLinecap="round"/>
           </svg>

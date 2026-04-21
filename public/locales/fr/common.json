@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "about": "À propos",
+    "releaseNotes": "Notes de version",
+    "download": "Télécharger"
+  },
+  "footer": {
+    "tagline": "L'Atelier Numérique — un poste de travail Linux axé sur la souveraineté, conçu pour un travail sérieux et durable.",
+    "builtOn": "Basé sur openSUSE Leap 16.0",
+    "navigate": "Navigation",
+    "project": "Projet",
+    "community": "Communauté",
+    "documentation": "Documentation",
+    "privacy": "Politique de confidentialité",
+    "inspired": "Inspiré de Mageia Linux",
+    "crafted": "Conçu avec intention · 2026",
+    "copyright": "© 2026 AXEM-SX · L'Atelier Numérique · Tous droits réservés."
+  }
+}

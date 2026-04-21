@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "tagline": "L'Atelier Numérique",
+    "description": "Une expérience Linux raffinée pour les créateurs, les bâtisseurs et les esprits curieux. Intelligent. Puissant. Distinctement conçu.",
+    "builtOn": "Basé sur openSUSE Leap 16.0 — Un environnement Linux sobre pour un travail sérieux et durable.",
+    "downloadLight": "Télécharger Light",
+    "downloadPro": "Télécharger Pro",
+    "scroll": "Défiler",
+    "editionLightLabel": "LXQt · Wayland",
+    "editionLightDesc": "Un environnement accessible, minimal et léger, conçu pour l'informatique essentielle et les systèmes à ressources limitées.",
+    "editionProLabel": "KDE Plasma · Wayland",
+    "editionProDesc": "Un environnement complet et performant avec des outils étendus pour les utilisateurs avancés et les flux de travail professionnels."
+  },
+  "features": {
+    "heading": "Conçu autrement.",
+    "headingAccent": "Par conception.",
+    "subheading": "Chaque outil d'AXEM-SX est façonné avec intention — du premier démarrage jusqu'aux flux de travail les plus exigeants.",
+    "controlHub": {
+      "title": "Centre de contrôle",
+      "description": "Un poste de commande unifié pour votre système. Optimisez les performances, gérez le matériel et maîtrisez chaque aspect de votre environnement en un seul endroit."
+    },
+    "consoleAI": {
+      "title": "Console IA",
+      "description": "Votre terminal, élevé. Un shell assisté par IA qui comprend le contexte, suggère des commandes et vous aide à travailler mieux — pas plus dur."
+    },
+    "softDepot": {
+      "title": "Dépôt Logiciel",
+      "description": "Un hub logiciel curé pour AXEM-SX. Découvrez, installez et gérez vos applications avec élégance — sans terminal requis."
+    }
+  },
+  "dock": {
+    "heading": "Votre",
+    "headingAccent": "Atelier",
+    "headingEnd": "vous attend",
+    "subheading": "Disponible le 1er mai — AXEM-SX offre une expérience Linux distinctive, façonnée avec la précision d'un maître artisan.",
+    "available": "Disponible le 1er mai 2026",
+    "comingSoon": "Bientôt disponible",
+    "builtOn": "Basé sur openSUSE Leap 16.0 · Un environnement Linux sobre pour un travail sérieux et durable."
+  }
+}

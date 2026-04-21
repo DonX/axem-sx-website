@@ -12,7 +12,7 @@ export default function PageLayout({ children, title, description }: PageLayoutP
   return (
     <>
       <Head>
-        <title>{title} — AXEM-SX</title>
+        <title>{`${title} — AXEM-SX`}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Axem-head-ICON_64x64.png" />

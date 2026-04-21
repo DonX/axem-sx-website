@@ -1,0 +1,48 @@
+{
+  "metaTitle": "About",
+  "metaDesc": "AXEM-SX is a sovereignty-oriented Linux workstation OS built on openSUSE Leap 16.0 — a restrained environment for sustained, serious work.",
+  "heroHeading": "About",
+  "heroAccent": "AXEM-SX",
+  "heroSub": "A sovereignty-oriented workstation operating system. Built for builders, architects, engineers, and long-cycle thinkers who require an environment that respects their attention and data sovereignty.",
+
+  "s1Title": "A Different Kind of Linux",
+  "s1p1": "Most operating systems try to disappear — becoming a frictionless void of abstract glass and transparency. AXEM-SX takes the opposite approach. We believe a workstation should feel like a place.",
+  "s1p2": "Welcome to AXEM-SX 0.9 (Founders Preview). Built on the enterprise-grade foundation of openSUSE Leap 16.0, AXEM-SX is a purpose-driven workstation OS designed for disciplined productivity, sovereignty, and long-cycle reliability.",
+  "s1quote": "Built on openSUSE Leap 16.0. A restrained Linux environment for sustained, serious work.",
+
+  "s2Title": "The Material Metaphor",
+  "s2p1": "In an era where software interfaces are increasingly abstract, flat, and detached, AXEM-SX reintroduces material metaphors.",
+  "s2p2": "The Wood & Gold interface is not merely a theme — it is a signal of equilibrium. The wood textures remind the user that computing is a human activity rooted in the physical world. This grounded aesthetic is designed to reduce digital fatigue.",
+  "s2p3": "Just as a carpenter respects their workbench, AXEM-SX respects your screen as a space for craftsmanship, not consumption.",
+  "s2card1Label": "Reduced Animations",
+  "s2card1Desc": "Windows snap instantly. Transitions are minimized to reduce cognitive load.",
+  "s2card2Label": "High Contrast",
+  "s2card2Desc": "Text and active elements prioritized for readability during long sessions.",
+  "s2card3Label": "Keyboard-Centric",
+  "s2card3Desc": "Rapid navigation without mouse dependency — optimized for efficiency.",
+
+  "s3Title": "The Sovereignty Philosophy",
+  "s3intro": "AXEM-SX is built around three uncompromisable pillars:",
+  "s3pillar1Name": "Sovereignty",
+  "s3pillar1Desc": "Your data never leaves your machine. The AI runs locally. No remote services are pre-enabled. No \"phone home.\"",
+  "s3pillar2Name": "Discipline",
+  "s3pillar2Desc": "The interface is designed to support focus — not fragmentation. Every default is intentional.",
+  "s3pillar3Name": "Long-Cycle Reliability",
+  "s3pillar3Desc": "Built on Leap 16.0, supported until July 2034. Plan your long-term projects without forced obsolescence.",
+
+  "s4Title": "Who It's For",
+  "s4intro": "AXEM-SX is not for everyone — and that is by design.",
+  "s4item1": "Builders and makers who treat their workstation as a primary tool",
+  "s4item2": "Architects and engineers who need long-cycle stability",
+  "s4item3": "Creators who value independence over convenience",
+  "s4item4": "Those who reject data exfiltration as a price for productivity",
+  "s4item5": "Linux users ready to move beyond the general-purpose distribution",
+
+  "s5Title": "Localization Roadmap",
+  "s5intro": "AXEM-SX is committed to digital inclusion. The Digital Workshop must be accessible in the languages of those who need it most.",
+  "s5note": "Note: Haitian Creole localization is a deliberate statement of digital inclusion — breaking away from the standard FIGS localization found in most Linux distributions.",
+  "s5lang1": "English", "s5lang1Note": "Live", "s5lang1Status": "Primary",
+  "s5lang2": "Français", "s5lang2Note": "L'atelier numérique", "s5lang2Status": "Planned",
+  "s5lang3": "Español", "s5lang3Note": "El taller digital", "s5lang3Status": "Planned",
+  "s5lang4": "Kreyòl Ayisyen", "s5lang4Note": "Digital inclusion", "s5lang4Status": "Planned"
+}

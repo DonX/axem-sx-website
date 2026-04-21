@@ -5,7 +5,7 @@ const dockItems = [
   { src: '/axem-control-hub.png', alt: 'Control Hub', label: 'Control Hub' },
   { src: '/axem-sx-console-ai.png', alt: 'Console AI', label: 'Console AI' },
   { src: '/soft-depot.png', alt: 'Soft Depot', label: 'Soft Depot' },
-  { src: '/axem-sx-app-menu-launcher-icon.jpeg', alt: 'App Menu', label: 'App Menu' },
+  { src: '/AI-SX-CHATGPT_64px.png', alt: 'AI-SX ChatGPT', label: 'AI-SX ChatGPT' },
 ];
 
 export default function WoodDock() {
@@ -71,7 +71,7 @@ export default function WoodDock() {
           </p>
           <button
             disabled
-            className="px-10 py-4 rounded-full bg-amber-500/30 border border-amber-400/40 text-amber-300/60 font-bold text-sm tracking-widest uppercase cursor-not-allowed"
+            className="px-16 py-7 bg-amber-500/20 border-2 border-amber-400/30 text-amber-300/50 font-bold text-xl tracking-normal uppercase cursor-not-allowed"
           >
             Coming Soon
           </button>

@@ -1,4 +1,11 @@
 import PageLayout from '@/components/PageLayout';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import type { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale ?? 'en', ['common', 'release-notes'])) },
+});
 
 function ReleaseSection({ num, title, children }: { num: string; title: string; children: React.ReactNode }) {
   return (
@@ -30,138 +37,97 @@ function Note({ type, children }: { type: 'known' | 'tip' | 'warn'; children: Re
 }
 
 export default function ReleaseNotesPage() {
+  const { t } = useTranslation('release-notes');
   return (
-    <PageLayout
-      title="Release Notes"
-      description="AXEM-SX 0.9 Founders Preview release notes — Wayland-only, Boh-IO AI console, Cockpit administration, and sovereignty-first defaults on openSUSE Leap 16.0."
-    >
+    <PageLayout title={t('metaTitle')} description={t('metaDesc')}>
       {/* Hero */}
       <div className="w-full py-20 px-6 flex flex-col items-center text-center border-b border-amber-400/10"
         style={{ background: 'linear-gradient(180deg, #111 0%, #0a0a0a 100%)' }}>
-        <div className="w-8 h-8 mb-6" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
-        <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-3">
-          Release Notes
-        </h1>
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
-          {[
-            ['Version', '0.9 Founders Preview'],
-            ['Base', 'openSUSE Leap 16.0'],
-            ['Arch', 'x86_64-v2 only'],
-          ].map(([label, val]) => (
-            <div key={label} className="px-3 py-1 rounded-full border border-amber-400/20 text-xs text-amber-300/70">
-              <span className="text-white/30">{label}: </span>{val}
-            </div>
-          ))}
+        <div className="max-w-3xl w-full mx-auto flex flex-col items-center gap-4">
+          <div className="w-8 h-8" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">{t('heroHeading')}</h1>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {([['badgeVersion','0.9 Founders Preview'],['badgeBase','openSUSE Leap 16.0'],['badgeArch','x86_64-v2 only']] as const).map(([key, val]) => (
+              <div key={key} className="px-3 py-1 rounded-full border border-amber-400/20 text-xs text-amber-300/70">
+                <span className="text-white/30">{t(key)}: </span>{val}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 py-24 flex flex-col gap-16">
+      <div className="max-w-3xl w-full mx-auto px-6 py-24 flex flex-col gap-20">
 
-        {/* Founders Preview */}
-        <ReleaseSection num="1" title="Defining the Founders Preview">
-          <p>
-            AXEM-SX 0.9 is a near-complete look at our vision for a sovereignty-oriented workstation.
-            It is built on the developing code of openSUSE Leap 16.0.
-          </p>
+        <ReleaseSection num="1" title={t('s1Title')}>
+          <p>{t('s1p')}</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-2">
-            {[
-              { label: 'Purpose', desc: 'Test the Boot-to-Studio workflow and Cockpit-based management.' },
-              { label: 'Stability', desc: 'Enterprise-grade core with some Beta edges from upstream.' },
-              { label: 'Feedback', desc: 'Specifically seeking reports on local AI and Wayland on NVIDIA hardware.' },
-            ].map(item => (
-              <div key={item.label} className="p-3 rounded-xl bg-white/5 border border-amber-400/10">
-                <p className="text-amber-300 font-bold text-xs uppercase tracking-wider mb-1">{item.label}</p>
-                <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+            {(['1','2','3'] as const).map(n => (
+              <div key={n} className="p-3 rounded-xl bg-white/5 border border-amber-400/10">
+                <p className="text-amber-300 font-bold text-xs uppercase tracking-wider mb-1">{t(`s1card${n}Label`)}</p>
+                <p className="text-white/50 text-xs leading-relaxed">{t(`s1card${n}Desc`)}</p>
               </div>
             ))}
           </div>
         </ReleaseSection>
 
-        {/* Wayland */}
-        <ReleaseSection num="2" title="Desktop Architecture — Strict Wayland">
-          <p>AXEM-SX 0.9 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.</p>
+        <ReleaseSection num="2" title={t('s2Title')}>
+          <p>{t('s2p')}</p>
           <ul className="flex flex-col gap-2 mt-1">
-            <li><strong className="text-white/80">Xorg is Gone:</strong> No fallback X11 session at the login screen.</li>
-            <li><strong className="text-white/80">Legacy App Support:</strong> Older applications run transparently via XWayland.</li>
-            <li><strong className="text-white/80">NVIDIA Boot-to-Studio:</strong> Open kernel driver and user-space drivers install automatically on supported GPUs.</li>
+            {(['1','2','3'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s2li${n}Strong`)}</strong> {t(`s2li${n}`)}</li>
+            ))}
           </ul>
-          <Note type="tip">
-            If you experience black screens during installation, boot with the <code className="text-amber-300 font-mono">nomodeset</code> kernel option.
-          </Note>
+          <Note type="tip">{t('s2tip')}</Note>
         </ReleaseSection>
 
-        {/* Boh-IO */}
-        <ReleaseSection num="3" title="The Civic-Minded Console (Boh-IO)">
-          <p>AXEM-SX introduces Boh-IO — Bridge Our Humanities with Input &amp; Output. A specialized console with a Bash terminal on the left and a local AI Sidecar on the right.</p>
+        <ReleaseSection num="3" title={t('s3Title')}>
+          <p>{t('s3p')}</p>
           <ul className="flex flex-col gap-2 mt-1">
-            <li><strong className="text-white/80">Local &amp; Private:</strong> phi3:mini (3.8B) via Ollama. No data leaves your machine. History exists only in RAM.</li>
-            <li><strong className="text-white/80">Meta-Commands:</strong> <code className="text-amber-300 font-mono">boh explain</code> · <code className="text-amber-300 font-mono">boh safer</code> · <code className="text-amber-300 font-mono">boh teach</code> · <code className="text-amber-300 font-mono">boh dry-run</code></li>
-            <li><strong className="text-white/80">Status in 0.9:</strong> Active preview — tuned for AXEM-SX and Linux command guidance.</li>
+            {(['1','2','3'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s3li${n}Strong`)}</strong> {t(`s3li${n}`)}</li>
+            ))}
           </ul>
         </ReleaseSection>
 
-        {/* Cockpit */}
-        <ReleaseSection num="4" title="System Administration — Cockpit">
-          <p>
-            Unlike most distributions that have dropped YaST entirely in favor of generic web tools,
-            AXEM-SX preserves and <strong className="text-white/80">curates YaST</strong> through
-            the AXEM-SX Control Hub — giving you the power of a proven administration layer
-            with a refined, workstation-focused interface alongside Cockpit.
-          </p>
+        <ReleaseSection num="4" title={t('s4Title')}>
+          <p>{t('s4p')}</p>
           <ul className="flex flex-col gap-2 mt-1">
-            <li><strong className="text-white/80">Access:</strong> <code className="text-amber-300 font-mono">localhost:9090</code> in your browser.</li>
-            <li><strong className="text-white/80">Modules:</strong> Storage · Networking · Logs — curated for workstation tasks.</li>
+            {(['1','2'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s4li${n}Strong`)}</strong> {t(`s4li${n}`)}</li>
+            ))}
           </ul>
-          <Note type="known">
-            A &ldquo;gray line&rdquo; visual glitch may appear in the storage menu when activating certain disks. This is cosmetic and does not affect data.
-          </Note>
+          <Note type="known">{t('s4known')}</Note>
         </ReleaseSection>
 
-        {/* Pre-applied fixes */}
-        <ReleaseSection num="5" title="Workstation Optimizations &amp; Pre-Applied Fixes">
-          <p>These are currently manual steps in base Leap 16.0 — AXEM-SX applies them for you out of the box.</p>
+        <ReleaseSection num="5" title={t('s5Title')}>
+          <p>{t('s5p')}</p>
           <ul className="flex flex-col gap-2 mt-1">
-            <li>
-              <strong className="text-white/80">Container Networking Fixed:</strong> Docker and KVM (libvirt) work side-by-side immediately.
-              Firewall backend forced to <code className="text-amber-300 font-mono">iptables</code> to prevent the known upstream conflict.
-            </li>
-            <li><strong className="text-white/80">Audio:</strong> PipeWire is the default sound server — PulseAudio fully replaced.</li>
-            <li><strong className="text-white/80">Networking:</strong> NetworkManager only — the legacy wicked tool suite is removed.</li>
+            {(['1','2','3'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s5li${n}Strong`)}</strong> {t(`s5li${n}`)}</li>
+            ))}
           </ul>
         </ReleaseSection>
 
-        {/* Security */}
-        <ReleaseSection num="6" title="Security &amp; Privacy Defaults">
+        <ReleaseSection num="6" title={t('s6Title')}>
           <ul className="flex flex-col gap-2">
-            <li><strong className="text-white/80">Root Login Disabled:</strong> Cannot log in as root via SSH using a password. SSH key required.</li>
-            <li><strong className="text-white/80">SELinux Enforcing:</strong> Strict security policy enforced — AppArmor is not the default.</li>
-            <li><strong className="text-white/80">No Phone Home:</strong> All remote services are disabled by default.</li>
+            {(['1','2','3'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s6li${n}Strong`)}</strong> {t(`s6li${n}`)}</li>
+            ))}
           </ul>
         </ReleaseSection>
 
-        {/* Hardware */}
-        <ReleaseSection num="7" title="Hardware Requirements">
+        <ReleaseSection num="7" title={t('s7Title')}>
           <ul className="flex flex-col gap-2">
-            <li><strong className="text-white/80">CPU:</strong> x86-64-v2 required (approximately post-2009).</li>
-            <li><strong className="text-white/80">32-bit:</strong> Not supported — AXEM-SX is strictly 64-bit.</li>
-            <li><strong className="text-white/80">/tmp:</strong> RAM disk (tmpfs) — cleared on every reboot.</li>
+            {(['1','2','3'] as const).map(n => (
+              <li key={n}><strong className="text-white/80">{t(`s7li${n}Strong`)}</strong> {t(`s7li${n}`)}</li>
+            ))}
           </ul>
-          <Note type="warn">
-            Running AXEM-SX in a Virtual Machine on an older host will cause a kernel crash.
-            Set the VM CPU type to <code className="text-amber-300 font-mono">host-passthrough</code> or <code className="text-amber-300 font-mono">host-model</code>.
-          </Note>
+          <Note type="warn">{t('s7warn')}</Note>
         </ReleaseSection>
 
-        {/* Known Issues */}
-        <ReleaseSection num="8" title="Known Issues in Preview">
-          <Note type="known">
-            <strong>Installer Network Config:</strong> Complex network setups (bonding) are limited during install. Use DHCP for installation, configure via Cockpit after.
-          </Note>
-          <Note type="known">
-            <strong>Zypper Repository:</strong> A bad repository source may be added after install.
-            If <code className="text-amber-300 font-mono">zypper</code> complains, remove it with{' '}
-            <code className="text-amber-300 font-mono">zypper rr 1</code>.
-          </Note>
+        <ReleaseSection num="8" title={t('s8Title')}>
+          <Note type="known">{t('s8known1')}</Note>
+          <Note type="known">{t('s8known2')}</Note>
         </ReleaseSection>
 
       </div>
