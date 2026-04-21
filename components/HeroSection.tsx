@@ -75,6 +75,18 @@ export default function HeroSection() {
             </Link>
           </div>
 
+          {/* Live credentials notice */}
+          <div className="w-full max-w-2xl mt-1 flex flex-col sm:flex-row items-center justify-center gap-4 px-6 py-3 border border-amber-400/30 bg-amber-400/5">
+            <span className="text-amber-400/80 text-xs font-bold tracking-widest uppercase shrink-0">
+              🔑 {t('hero.liveCredentialsLabel')}
+            </span>
+            <div className="flex items-center gap-4 text-xs text-white/60">
+              <span>{t('hero.liveUser')} : <code className="text-amber-300 font-mono font-bold">axem</code></span>
+              <span className="text-white/20">·</span>
+              <span>{t('hero.livePassword')} : <code className="text-amber-300 font-mono font-bold">axem</code></span>
+            </div>
+          </div>
+
           {/* Edition breakdown */}
           <div className="flex flex-col sm:flex-row gap-0 w-full max-w-2xl mt-2 border border-amber-400/15 divide-y sm:divide-y-0 sm:divide-x divide-amber-400/15">
             {/* Light */}

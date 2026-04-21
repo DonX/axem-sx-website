@@ -47,6 +47,13 @@
   "s7li3Strong": "/tmp:", "s7li3": "RAM disk (tmpfs) — cleared on every reboot.",
   "s7warn": "Running AXEM-SX in a Virtual Machine on an older host will cause a kernel crash. Set the VM CPU type to host-passthrough or host-model.",
 
+  "liveCredTitle": "Live Session Credentials",
+  "liveCredBody": "Both the Light and Pro ISOs boot into a live session. No installation is required to test.",
+  "liveCredUser": "Live user",
+  "liveCredPass": "Password",
+  "liveCredValue": "axem",
+  "liveCredTip": "Log in with user axem and password axem to access the full live desktop.",
+
   "s8Title": "Known Issues in Preview",
   "s8known1": "Installer Network Config: Complex network setups (bonding) are limited during install. Use DHCP for installation, configure via Cockpit after.",
   "s8known2": "Zypper Repository: A bad repository source may be added after install. If zypper complains, remove it with zypper rr 1."

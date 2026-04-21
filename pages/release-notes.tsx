@@ -126,6 +126,26 @@ export default function ReleaseNotesPage() {
           <Note type="warn">{t('s7warn')}</Note>
         </ReleaseSection>
 
+        {/* Live credentials */}
+        <div className="flex flex-col gap-4 p-6 border-2 border-amber-400/40 bg-amber-400/5">
+          <h3 className="text-base font-black text-amber-400 uppercase tracking-widest">
+            🔑 {t('liveCredTitle')}
+          </h3>
+          <p className="text-sm text-white/60 leading-relaxed">{t('liveCredBody')}</p>
+          <div className="flex flex-col sm:flex-row gap-6 mt-1">
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-white/40 uppercase tracking-widest">{t('liveCredUser')}</span>
+              <code className="text-2xl font-black text-amber-400 font-mono">axem</code>
+            </div>
+            <div className="hidden sm:block w-px bg-amber-400/20 self-stretch" />
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-white/40 uppercase tracking-widest">{t('liveCredPass')}</span>
+              <code className="text-2xl font-black text-amber-400 font-mono">axem</code>
+            </div>
+          </div>
+          <p className="text-xs text-amber-300/50 italic mt-1">{t('liveCredTip')}</p>
+        </div>
+
         <ReleaseSection num="8" title={t('s8Title')}>
           <Note type="known">{t('s8known1')}</Note>
           <Note type="known">{t('s8known2')}</Note>

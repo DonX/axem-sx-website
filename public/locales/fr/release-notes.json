@@ -47,6 +47,13 @@
   "s7li3Strong": "/tmp :", "s7li3": "Disque RAM (tmpfs) — effacé à chaque redémarrage.",
   "s7warn": "Exécuter AXEM-SX dans une machine virtuelle sur un hôte plus ancien provoquera un plantage du noyau. Définissez le type CPU de la VM sur host-passthrough ou host-model.",
 
+  "liveCredTitle": "Identifiants de session live",
+  "liveCredBody": "Les deux ISOs (Light et Pro) démarrent en session live. Aucune installation n'est requise pour tester.",
+  "liveCredUser": "Utilisateur live",
+  "liveCredPass": "Mot de passe",
+  "liveCredValue": "axem",
+  "liveCredTip": "Connectez-vous avec l'utilisateur axem et le mot de passe axem pour accéder au bureau live complet.",
+
   "s8Title": "Problèmes connus en aperçu",
   "s8known1": "Config réseau installateur : Les configurations réseau complexes (agrégation) sont limitées pendant l'installation. Utilisez DHCP pour l'installation, configurez via Cockpit après.",
   "s8known2": "Dépôt Zypper : Une mauvaise source de dépôt peut être ajoutée après l'installation. Si zypper se plaint, supprimez-la avec zypper rr 1."
