@@ -24,9 +24,9 @@ export default function AboutPage() {
   return (
     <PageLayout title={t('metaTitle')} description={t('metaDesc')}>
       {/* Hero Band */}
-      <div className="w-full py-24 px-6 flex flex-col items-center text-center border-b border-amber-400/10"
+      <div className="w-full py-24 px-6 text-center border-b border-amber-400/10"
         style={{ background: 'linear-gradient(180deg, #111 0%, #0a0a0a 100%)' }}>
-        <div className="max-w-3xl w-full mx-auto flex flex-col items-center gap-4">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
           <div className="w-8 h-8" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight">
             {t('heroHeading')} <span className="text-amber-400">{t('heroAccent')}</span>
@@ -36,7 +36,8 @@ export default function AboutPage() {
       </div>
 
       {/* Main content */}
-      <div className="max-w-3xl w-full mx-auto px-6 py-24 flex flex-col gap-24">
+      <div className="w-full px-6 py-24">
+      <div className="max-w-3xl mx-auto flex flex-col gap-24">
 
         <Section title={t('s1Title')}>
           <div className="flex flex-col gap-4 text-white/70 leading-relaxed">
@@ -111,6 +112,7 @@ export default function AboutPage() {
           </div>
         </Section>
 
+      </div>
       </div>
     </PageLayout>
   );

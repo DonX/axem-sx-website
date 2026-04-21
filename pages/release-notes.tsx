@@ -41,9 +41,9 @@ export default function ReleaseNotesPage() {
   return (
     <PageLayout title={t('metaTitle')} description={t('metaDesc')}>
       {/* Hero */}
-      <div className="w-full py-20 px-6 flex flex-col items-center text-center border-b border-amber-400/10"
+      <div className="w-full py-20 px-6 text-center border-b border-amber-400/10"
         style={{ background: 'linear-gradient(180deg, #111 0%, #0a0a0a 100%)' }}>
-        <div className="max-w-3xl w-full mx-auto flex flex-col items-center gap-4">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
           <div className="w-8 h-8" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">{t('heroHeading')}</h1>
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -56,7 +56,8 @@ export default function ReleaseNotesPage() {
         </div>
       </div>
 
-      <div className="max-w-3xl w-full mx-auto px-6 py-24 flex flex-col gap-20">
+      <div className="w-full px-6 py-24">
+      <div className="max-w-3xl mx-auto flex flex-col gap-20">
 
         <ReleaseSection num="1" title={t('s1Title')}>
           <p>{t('s1p')}</p>
@@ -130,6 +131,7 @@ export default function ReleaseNotesPage() {
           <Note type="known">{t('s8known2')}</Note>
         </ReleaseSection>
 
+      </div>
       </div>
     </PageLayout>
   );

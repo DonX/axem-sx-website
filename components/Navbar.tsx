@@ -23,11 +23,11 @@ export default function Navbar() {
         boxShadow: '0 2px 24px rgba(0,0,0,0.9)',
       }}
     >
-      {/* Inner container */}
-      <div className="w-full max-w-5xl mx-auto px-6 flex items-center justify-between gap-4">
+      {/* Inner container — true 3-column grid so links are always geometrically centred */}
+      <div className="w-full max-w-5xl mx-auto px-6 grid grid-cols-[auto_1fr_auto] items-center gap-4">
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group shrink-0">
+        {/* Col 1 — Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10">
             <Image
               src="/AXEM-SX_W64.png"
@@ -41,54 +41,52 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Nav Links — centered */}
-        <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-semibold tracking-wider text-[#f5f0e8]/90" style={{ fontFamily: 'var(--font-allan), serif' }}>
+        {/* Col 2 — Nav links, perfectly centred */}
+        <ul className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold tracking-wider text-[#f5f0e8]/90" style={{ fontFamily: 'var(--font-allan), serif' }}>
           {[
-            { label: t('nav.features'), href: '/features' },
-            { label: t('nav.about'), href: '/about' },
-            { label: t('nav.releaseNotes'), href: '/release-notes' },
+            { label: t('nav.features'),     href: '/features' },
+            { label: t('nav.about'),         href: '/about' },
+            { label: t('nav.releaseNotes'),  href: '/release-notes' },
           ].map((item) => (
             <li key={item.href}>
-              <Link
-                href={item.href}
-                className="text-[#f5f0e8]/90 hover:text-amber-400 transition-colors duration-200 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
-              >
+              <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
                 {item.label}
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* Right side: Lang switcher + Download CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          {/* Language Switcher */}
+        {/* Col 3 — Lang switcher + Download */}
+        <div className="flex items-center gap-3 justify-end">
+          {/* Lang switcher — desktop only */}
           <button
             onClick={toggleLocale}
-            className="px-3 py-1.5 border border-amber-400/30 hover:border-amber-400/70 text-amber-400/70 hover:text-amber-400 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
+            className="hidden md:inline-flex px-3 py-1.5 border border-amber-400/30 hover:border-amber-400/70 text-amber-400/70 hover:text-amber-400 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
             aria-label="Switch language"
           >
             {router.locale === 'en' ? 'FR' : 'EN'}
           </button>
 
-          {/* Download CTA */}
+          {/* Download CTA — desktop only */}
           <Link
             href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-normal uppercase transition-colors duration-200 shadow-lg hover:shadow-amber-400/40"
+            className="hidden md:inline-flex px-8 py-4 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-normal uppercase transition-colors duration-200 shadow-lg hover:shadow-amber-400/40"
           >
             {t('nav.download')}
           </Link>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-white text-2xl drop-shadow"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? '✕' : '☰'}
-        </button>
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            className="md:hidden text-white text-2xl drop-shadow"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? '✕' : '☰'}
+          </button>
+        </div>
 
       </div>
 
@@ -118,6 +116,7 @@ export default function Navbar() {
             </Link>
           ))}
           <button
+            type="button"
             onClick={() => { toggleLocale(); setMenuOpen(false); }}
             className="mt-2 px-4 py-2 border border-amber-400/30 text-amber-400/70 text-xs font-bold tracking-widest uppercase"
           >
