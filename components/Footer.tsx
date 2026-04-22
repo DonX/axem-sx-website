@@ -67,6 +67,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://github.com/DonX/axem-sx-website/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-400 transition-colors duration-200 flex items-center gap-1"
+              >
+                🐞 {t('footer.reportBug')}
+              </a>
+            </li>
           </ul>
           <div className="mt-2 flex flex-col gap-1">
             <span className="text-[10px] text-white/25 tracking-wide">{t('footer.inspired')}</span>
