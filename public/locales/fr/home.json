@@ -26,7 +26,7 @@
     },
     "consoleAI": {
       "title": "Console IA",
-      "description": "Votre terminal, élevé. Un shell assisté par IA qui comprend le contexte, suggère des commandes et vous aide à travailler mieux — pas plus dur."
+      "description": "Boh-IO — Un agent civique enraciné, au service de l’humain et de ses interactions. (Activation post-installation requise)."
     },
     "softDepot": {
       "title": "Dépôt Logiciel",

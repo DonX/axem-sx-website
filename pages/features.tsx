@@ -43,127 +43,127 @@ export default function FeaturesPage() {
       </div>
 
       <div className="w-full px-6 py-24">
-      <div className="max-w-4xl mx-auto flex flex-col gap-20">
+        <div className="max-w-6xl mx-auto flex flex-col gap-20">
 
-        {/* Boh-IO */}
-        <section id="boh-io" className="flex flex-col gap-10">
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <div className="relative w-14 h-14 shrink-0">
-                <Image src="/axem-sx-console-ai.png" alt="Boh-IO" fill className="object-contain" />
-              </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-black text-white">Boh-IO</h2>
-                <p className="text-amber-300/70 text-sm tracking-wider uppercase">{t('bohioSubtitle')}</p>
-              </div>
-            </div>
-            <p className="text-white/60 leading-relaxed max-w-2xl">{t('bohioDesc')}</p>
-          </div>
-
-          {/* Two pane diagram */}
-          <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden border border-amber-400/15 text-xs font-mono">
-            <div className="bg-[#0d0d0d] p-5 flex flex-col gap-3">
-              <div className="text-amber-400/60 uppercase tracking-widest text-[10px]">{t('bohioTerminalPane')}</div>
-              <div className="text-green-400/80">$ ls -la</div>
-              <div className="text-white/40">total 48</div>
-              <div className="text-white/40">drwxr-xr-x  8 axem axem 4096 ...</div>
-              <div className="text-green-400/80">$ boh explain</div>
-              <div className="text-white/30 italic text-[10px]">{t('bohioTriggerNote')}</div>
-            </div>
-            <div className="p-5 flex flex-col gap-3" style={{ background: 'linear-gradient(180deg, #1a1612 0%, #0f0e0c 100%)', borderLeft: '1px solid rgba(201,166,95,0.2)' }}>
-              <div className="text-amber-400/60 uppercase tracking-widest text-[10px]">{t('bohioSidecarPane')}</div>
-              <div className="text-amber-200/70 text-xs leading-relaxed">
-                <strong className="text-amber-300">ls</strong> lists directory contents.<br />
-                <strong className="text-amber-300">-l</strong> shows detailed format.<br />
-                <strong className="text-amber-300">-a</strong> includes hidden files (starting with .)
-              </div>
-              <div className="text-white/20 text-[10px] mt-auto italic">{t('bohioSidecarFooter')}</div>
-            </div>
-          </div>
-
-          {/* Commands */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-lg font-bold text-white mb-1">{t('bohioMetaCommands')}</h3>
-            <BohCommand cmd="boh explain" desc={t('bohioCmdExplain')} />
-            <BohCommand cmd="boh safer"  desc={t('bohioCmdSafer')} />
-            <BohCommand cmd="boh teach"  desc={t('bohioCmdTeach')} />
-            <BohCommand cmd="boh undo"   desc={t('bohioCmdUndo')} />
-            <BohCommand cmd="boh dry-run on" desc={t('bohioCmdDryRun')} />
-          </div>
-
-          {/* Privacy */}
-          <div className="p-6 rounded-2xl border border-amber-400/20 flex flex-col gap-3"
-            style={{ background: 'linear-gradient(135deg, rgba(174,142,88,0.05) 0%, transparent 100%)' }}>
-            <h3 className="text-base font-bold text-amber-300 uppercase tracking-wider">{t('privacyTitle')}</h3>
-            <ul className="flex flex-col gap-2">
-              {(['1','2','3','4'] as const).map(n => (
-                <li key={n} className="flex items-start gap-3 text-sm text-white/60">
-                  <span className="mt-1 w-3 h-3 shrink-0" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: '#c9a65f' }} />
-                  {t(`privacyItem${n}`)}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Constraints */}
-          <div className="p-5 rounded-xl bg-white/3 border border-white/10">
-            <p className="text-amber-400/70 text-xs font-bold uppercase tracking-widest mb-3">{t('constraintsTitle')}</p>
-            <p className="text-sm text-white/50 leading-relaxed">{t('constraintsDesc')}</p>
-          </div>
-        </section>
-
-        {/* Workshop Tools */}
-        <section className="flex flex-col gap-10">
-          <h2 className="text-3xl font-black text-white">{t('toolsTitle')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {([
-              { icon: '/axem-control-hub.png',    titleKey: 'tool1Title', descKey: 'tool1Desc' },
-              { icon: '/axem-sx-console-ai.png',  titleKey: 'tool2Title', descKey: 'tool2Desc' },
-              { icon: '/soft-depot.png',           titleKey: 'tool3Title', descKey: 'tool3Desc' },
-            ]).map((item) => (
-              <div key={item.titleKey} className="group flex flex-col gap-4 p-6 rounded-2xl bg-white/5 border border-amber-400/10 hover:border-amber-400/30 transition-all">
-                <div className="relative w-14 h-14">
-                  <Image src={item.icon} alt={t(item.titleKey)} fill className="object-contain group-hover:scale-110 transition-transform duration-300" />
+          {/* Boh-IO */}
+          <section id="boh-io" className="flex flex-col items-center gap-10 text-center">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4">
+                <div className="relative w-20 h-20 shrink-0">
+                  <Image src="/axem-sx-console-ai.png" alt="Boh-IO" fill className="object-contain" />
                 </div>
-                <h3 className="text-lg font-bold text-amber-300">{t(item.titleKey)}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{t(item.descKey)}</p>
+                <div>
+                  <h2 className="text-3xl md:text-5xl font-black text-white">Boh-IO</h2>
+                  <p className="text-amber-300/70 text-sm tracking-wider uppercase">{t('bohioSubtitle')}</p>
+                </div>
               </div>
-            ))}
-          </div>
-        </section>
+              <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">{t('bohioDesc')}</p>
+            </div>
 
-        {/* Technical Specs */}
-        <section className="flex flex-col gap-8">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-5 h-5" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
-              <h2 className="text-3xl font-black text-white">{t('archTitle')}</h2>
+            {/* Two pane diagram */}
+            <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden border border-amber-400/15 text-xs font-mono">
+              <div className="bg-[#0d0d0d] p-5 flex flex-col gap-3">
+                <div className="text-amber-400/60 uppercase tracking-widest text-[10px]">{t('bohioTerminalPane')}</div>
+                <div className="text-green-400/80">$ ls -la</div>
+                <div className="text-white/40">total 48</div>
+                <div className="text-white/40">drwxr-xr-x  8 axem axem 4096 ...</div>
+                <div className="text-green-400/80">$ boh explain</div>
+                <div className="text-white/30 italic text-[10px]">{t('bohioTriggerNote')}</div>
+              </div>
+              <div className="p-5 flex flex-col gap-3" style={{ background: 'linear-gradient(180deg, #1a1612 0%, #0f0e0c 100%)', borderLeft: '1px solid rgba(201,166,95,0.2)' }}>
+                <div className="text-amber-400/60 uppercase tracking-widest text-[10px]">{t('bohioSidecarPane')}</div>
+                <div className="text-amber-200/70 text-xs leading-relaxed">
+                  <strong className="text-amber-300">ls</strong> lists directory contents.<br />
+                  <strong className="text-amber-300">-l</strong> shows detailed format.<br />
+                  <strong className="text-amber-300">-a</strong> includes hidden files (starting with .)
+                </div>
+                <div className="text-white/20 text-[10px] mt-auto italic">{t('bohioSidecarFooter')}</div>
+              </div>
             </div>
-            <p className="text-white/40 text-sm pl-8">{t('archSub')}</p>
-          </div>
-          <div className="rounded-2xl border border-amber-400/10 overflow-hidden">
-            <div className="px-6 py-3 border-b border-amber-400/10" style={{ background: 'linear-gradient(180deg, #1a1612 0%, #0f0e0c 100%)' }}>
-              <span className="text-xs text-amber-400/60 uppercase tracking-widest font-semibold">{t('archTableHeader')}</span>
-            </div>
-            <div className="px-6 divide-y divide-white/5">
-              <SpecRow label={t('specBaseSystem')} value="openSUSE Leap 16.0 (Pre-Release)" />
-              <SpecRow label={t('specArch')} value="x86-64-v2 only — approximately post-2009 CPUs" />
-              <SpecRow label={t('specDisplay')} value="Wayland only — Xorg removed from installer" />
-              <SpecRow label={t('specLegacy')} value="XWayland (transparent compatibility)" />
-              <SpecRow label={t('specDesktop')} value="KDE Plasma (Wayland session)" />
-              <SpecRow label={t('specAdmin')} value="AXEM-SX Control Hub — curated YaST + Cockpit (localhost:9090)" />
-              <SpecRow label={t('specAudio')} value="PipeWire — replaces PulseAudio entirely" />
-              <SpecRow label={t('specNetwork')} value="NetworkManager only — wicked tool suite removed" />
-              <SpecRow label={t('specSecurity')} value="SELinux enforcing, root SSH password login disabled" />
-              <SpecRow label={t('specAI')} value="phi3:mini via local Ollama — offline, volatile RAM only" />
-              <SpecRow label={t('specTmp')} value="RAM disk (tmpfs) — cleared on every reboot" />
-              <SpecRow label={t('spec32bit')} value="Removed — strictly 64-bit workstation OS" />
-              <SpecRow label={t('specLTS')} value="Leap 16.0 lifecycle — supported until July 2034" />
-            </div>
-          </div>
-        </section>
 
-      </div>
+            {/* Commands */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-lg font-bold text-white mb-1">{t('bohioMetaCommands')}</h3>
+              <BohCommand cmd="boh explain" desc={t('bohioCmdExplain')} />
+              <BohCommand cmd="boh safer" desc={t('bohioCmdSafer')} />
+              <BohCommand cmd="boh teach" desc={t('bohioCmdTeach')} />
+              <BohCommand cmd="boh undo" desc={t('bohioCmdUndo')} />
+              <BohCommand cmd="boh dry-run on" desc={t('bohioCmdDryRun')} />
+            </div>
+
+            {/* Privacy */}
+            <div className="p-6 rounded-2xl border border-amber-400/20 flex flex-col gap-3"
+              style={{ background: 'linear-gradient(135deg, rgba(174,142,88,0.05) 0%, transparent 100%)' }}>
+              <h3 className="text-base font-bold text-amber-300 uppercase tracking-wider">{t('privacyTitle')}</h3>
+              <ul className="flex flex-col gap-2">
+                {(['1', '2', '3', '4'] as const).map(n => (
+                  <li key={n} className="flex items-start gap-3 text-sm text-white/60">
+                    <span className="mt-1 w-3 h-3 shrink-0" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: '#c9a65f' }} />
+                    {t(`privacyItem${n}`)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Constraints */}
+            <div className="p-5 rounded-xl bg-white/3 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-amber-400/70 text-xs font-bold uppercase tracking-widest mb-3">{t('constraintsTitle')}</p>
+              <p className="text-sm text-white/50 leading-relaxed">{t('constraintsDesc')}</p>
+            </div>
+          </section>
+
+          {/* Workshop Tools */}
+          <section className="flex flex-col items-center gap-10 text-center">
+            <h2 className="text-3xl font-black text-white">{t('toolsTitle')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {([
+                { icon: '/axem-control-hub.png', titleKey: 'tool1Title', descKey: 'tool1Desc' },
+                { icon: '/axem-sx-console-ai.png', titleKey: 'tool2Title', descKey: 'tool2Desc' },
+                { icon: '/soft-depot.png', titleKey: 'tool3Title', descKey: 'tool3Desc' },
+              ]).map((item) => (
+                <div key={item.titleKey} className="group flex flex-col items-center gap-4 p-6 rounded-2xl bg-white/5 border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                  <div className="relative w-14 h-14">
+                    <Image src={item.icon} alt={t(item.titleKey)} fill className="object-contain group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <h3 className="text-lg font-bold text-amber-300">{t(item.titleKey)}</h3>
+                  <p className="text-sm text-white/55 leading-relaxed">{t(item.descKey)}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Technical Specs */}
+          <section className="flex flex-col items-center gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-3 mb-2">
+                <div className="w-8 h-8 mb-4" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
+                <h2 className="text-3xl font-black text-white">{t('archTitle')}</h2>
+              </div>
+              <p className="text-white/40 text-sm max-w-xl mx-auto">{t('archSub')}</p>
+            </div>
+            <div className="rounded-2xl border border-amber-400/10 overflow-hidden w-full max-w-4xl">
+              <div className="px-6 py-3 border-b border-amber-400/10" style={{ background: 'linear-gradient(180deg, #1a1612 0%, #0f0e0c 100%)' }}>
+                <span className="text-xs text-amber-400/60 uppercase tracking-widest font-semibold">{t('archTableHeader')}</span>
+              </div>
+              <div className="px-6 divide-y divide-white/5">
+                <SpecRow label={t('specBaseSystem')} value="openSUSE Leap 16.0 (Pre-Release)" />
+                <SpecRow label={t('specArch')} value="x86-64-v2 only — approximately post-2009 CPUs" />
+                <SpecRow label={t('specDisplay')} value="Wayland only — Xorg removed from installer" />
+                <SpecRow label={t('specLegacy')} value="XWayland (transparent compatibility)" />
+                <SpecRow label={t('specDesktop')} value="KDE Plasma (Wayland session)" />
+                <SpecRow label={t('specAdmin')} value="AXEM-SX Control Hub — curated YaST + Cockpit (localhost:9090)" />
+                <SpecRow label={t('specAudio')} value="PipeWire — replaces PulseAudio entirely" />
+                <SpecRow label={t('specNetwork')} value="NetworkManager only — wicked tool suite removed" />
+                <SpecRow label={t('specSecurity')} value="SELinux enforcing, root SSH password login disabled" />
+                <SpecRow label={t('specAI')} value="phi3:mini via local Ollama — offline, volatile RAM only" />
+                <SpecRow label={t('specTmp')} value="RAM disk (tmpfs) — cleared on every reboot" />
+                <SpecRow label={t('spec32bit')} value="Removed — strictly 64-bit workstation OS" />
+                <SpecRow label={t('specLTS')} value="Leap 16.0 lifecycle — supported until July 2034" />
+              </div>
+            </div>
+          </section>
+
+        </div>
       </div>
     </PageLayout>
   );

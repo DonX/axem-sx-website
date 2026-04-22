@@ -23,8 +23,8 @@ export default function Navbar() {
         boxShadow: '0 2px 24px rgba(0,0,0,0.9)',
       }}
     >
-      {/* Inner container — true 3-column grid so links are always geometrically centred */}
-      <div className="w-full max-w-5xl mx-auto px-6 grid grid-cols-[auto_1fr_auto] items-center gap-4">
+      {/* Inner container — forced 3-column grid to ensure links are mathematically centered */}
+      <div className="w-full max-w-6xl mx-auto px-6 grid grid-cols-3 items-center gap-4">
 
         {/* Col 1 — Logo */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -44,9 +44,9 @@ export default function Navbar() {
         {/* Col 2 — Nav links, perfectly centred */}
         <ul className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold tracking-wider text-[#f5f0e8]/90" style={{ fontFamily: 'var(--font-allan), serif' }}>
           {[
-            { label: t('nav.features'),     href: '/features' },
-            { label: t('nav.about'),         href: '/about' },
-            { label: t('nav.releaseNotes'),  href: '/release-notes' },
+            { label: t('nav.features'), href: '/features' },
+            { label: t('nav.about'), href: '/about' },
+            { label: t('nav.releaseNotes'), href: '/release-notes' },
           ].map((item) => (
             <li key={item.href}>
               <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
@@ -57,7 +57,7 @@ export default function Navbar() {
         </ul>
 
         {/* Col 3 — Lang switcher + Download */}
-        <div className="flex items-center gap-3 justify-end">
+        <div className="flex items-center gap-4 justify-end">
           {/* Lang switcher — desktop only */}
           <button
             onClick={toggleLocale}
