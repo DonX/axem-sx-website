@@ -20,9 +20,9 @@
 
   "s3Title": "The Civic-Minded Console (Boh-IO)",
   "s3p": "AXEM-SX introduces Boh-IO — Bridge Our Humanities with Input & Output. A specialized console with a Bash terminal on the left and a local AI Sidecar on the right.",
-  "s3li1Strong": "Local & Private:", "s3li1": "phi3:mini (3.8B) via Ollama. No data leaves your machine. History exists only in RAM.",
-  "s3li2Strong": "Meta-Commands:", "s3li2": "boh explain · boh safer · boh teach · boh dry-run",
-  "s3li3Strong": "Status in 0.9:", "s3li3": "Active preview — tuned for AXEM-SX and Linux command guidance.",
+  "s3li1Strong": "Local & Private:", "s3li1": "axem-sx/boh-io via Ollama. No data leaves your machine. History exists only in RAM.",
+  "s3li2Strong": "Setup required:", "s3li2": "The axem-console package is in both ISOs. The BOH IO model (~2 GB) is downloaded separately via: ollama pull axem-sx/boh-io",
+  "s3li3Strong": "Status in 1.0:", "s3li3": "Active — see the Features page for the full step-by-step setup guide.",
 
   "s4Title": "System Administration — Cockpit",
   "s4p": "Unlike most distributions that have dropped YaST entirely in favor of generic web tools, AXEM-SX preserves and curates YaST through the AXEM-SX Control Hub — giving you the power of a proven administration layer with a refined, workstation-focused interface alongside Cockpit.",

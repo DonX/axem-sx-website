@@ -81,14 +81,39 @@ export default function FeaturesPage() {
               </div>
             </div>
 
-            {/* Commands */}
-            <div className="flex flex-col gap-3">
-              <h3 className="text-lg font-bold text-white mb-1">{t('bohioMetaCommands')}</h3>
-              <BohCommand cmd="boh explain" desc={t('bohioCmdExplain')} />
-              <BohCommand cmd="boh safer" desc={t('bohioCmdSafer')} />
-              <BohCommand cmd="boh teach" desc={t('bohioCmdTeach')} />
-              <BohCommand cmd="boh undo" desc={t('bohioCmdUndo')} />
-              <BohCommand cmd="boh dry-run on" desc={t('bohioCmdDryRun')} />
+            {/* AXEM Console Setup Guide */}
+            <div className="w-full max-w-2xl mx-auto flex flex-col gap-4 text-left">
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-bold text-white">{t('axemConsoleTitle')}</h3>
+                <p className="text-sm text-amber-300/60 leading-relaxed">{t('axemConsoleNote')}</p>
+              </div>
+
+              {/* Steps */}
+              {([
+                { headingKey: 'axemConsoleStep1Heading', cmdKey: 'axemConsoleStep1Cmd', note: null },
+                { headingKey: 'axemConsoleStep2Heading', cmdKey: 'axemConsoleStep2Cmd', note: null },
+                { headingKey: 'axemConsoleStep3Heading', cmdKey: 'axemConsoleStep3Cmd', note: 'axemConsoleStep3Note' },
+                { headingKey: 'axemConsoleStep4Heading', cmdKey: 'axemConsoleStep4Cmd', note: null },
+              ] as const).map((step) => (
+                <div key={step.cmdKey} className="flex flex-col gap-1 p-4 bg-white/5 border border-amber-400/10 hover:border-amber-400/25 transition-colors">
+                  <span className="text-xs text-white/40 uppercase tracking-widest">{t(step.headingKey)}</span>
+                  <code className="text-amber-300 font-mono text-sm">{t(step.cmdKey)}</code>
+                  {step.note && (
+                    <span className="text-[11px] text-white/30 italic">{t(step.note)}</span>
+                  )}
+                </div>
+              ))}
+
+              {/* Notes */}
+              <div className="flex flex-col gap-2 p-4 border border-white/10 bg-white/3">
+                <span className="text-xs text-amber-400/60 uppercase tracking-widest font-semibold">{t('axemConsoleNotesTitle')}</span>
+                {(['axemConsoleNote1', 'axemConsoleNote2', 'axemConsoleNote3'] as const).map((key) => (
+                  <p key={key} className="text-xs text-white/50 leading-relaxed flex items-start gap-2">
+                    <span className="text-amber-400/50 mt-0.5">·</span>
+                    {t(key)}
+                  </p>
+                ))}
+              </div>
             </div>
 
             {/* Privacy */}
@@ -155,7 +180,7 @@ export default function FeaturesPage() {
                 <SpecRow label={t('specAudio')} value="PipeWire — replaces PulseAudio entirely" />
                 <SpecRow label={t('specNetwork')} value="NetworkManager only — wicked tool suite removed" />
                 <SpecRow label={t('specSecurity')} value="SELinux enforcing, root SSH password login disabled" />
-                <SpecRow label={t('specAI')} value="phi3:mini via local Ollama — offline, volatile RAM only" />
+                <SpecRow label={t('specAI')} value="axem-sx/boh-io via local Ollama — offline, volatile RAM only" />
                 <SpecRow label={t('specTmp')} value="RAM disk (tmpfs) — cleared on every reboot" />
                 <SpecRow label={t('spec32bit')} value="Removed — strictly 64-bit workstation OS" />
                 <SpecRow label={t('specLTS')} value="Leap 16.0 lifecycle — supported until July 2034" />
