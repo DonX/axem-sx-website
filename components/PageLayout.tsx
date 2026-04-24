@@ -19,10 +19,8 @@ export default function PageLayout({ children, title, description }: PageLayoutP
       </Head>
       <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col">
         <Navbar />
-        <main className="flex-1 pt-16 flex flex-col items-center">
-          <div className="w-full flex flex-col items-center">
-            {children}
-          </div>
+        <main className="flex-1 pt-16 w-full">
+          {children}
         </main>
         <Footer />
       </div>

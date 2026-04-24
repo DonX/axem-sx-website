@@ -33,11 +33,12 @@ code, pre, kbd, samp {
   font-weight: 400;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+/* NOTE: do NOT add a universal `* { margin: 0; padding: 0 }` reset here.
+   Tailwind v4 places all utilities inside `@layer utilities`, and unlayered
+   rules always win the cascade — a universal margin reset would override
+   `mx-auto` on every element, breaking centered containers site-wide.
+   Tailwind's own preflight already handles box-sizing and block-element
+   margin resets. */
 
 a {
   color: inherit;

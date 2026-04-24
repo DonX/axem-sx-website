@@ -37,7 +37,7 @@ export default function AboutPage() {
 
       {/* Main content */}
       <div className="w-full px-6 py-24">
-        <div className="max-w-5xl mx-auto flex flex-col gap-24">
+        <div className="max-w-6xl mx-auto flex flex-col gap-24">
 
           <Section title={t('s1Title')}>
             <div className="flex flex-col gap-4 text-white/70 leading-relaxed">

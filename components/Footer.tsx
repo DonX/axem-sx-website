@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Main footer body */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
 
         {/* Column 1 — Brand */}
         <div className="flex flex-col items-center md:items-start gap-4">
@@ -87,7 +87,7 @@ export default function Footer() {
 
       {/* Copyright bar */}
       <div className="relative z-10 w-full border-t border-amber-400/10 px-8 py-5">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-white/30 tracking-wider text-center sm:text-left">
             {t('footer.copyright')}
           </p>

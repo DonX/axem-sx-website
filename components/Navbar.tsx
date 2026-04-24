@@ -23,11 +23,13 @@ export default function Navbar() {
         boxShadow: '0 2px 24px rgba(0,0,0,0.9)',
       }}
     >
-      {/* Inner container — forced 3-column grid to ensure links are mathematically centered */}
-      <div className="w-full max-w-6xl mx-auto px-6 grid grid-cols-3 items-center gap-4">
+      {/* Inner container — full viewport width; 1fr / auto / 1fr keeps the nav
+          links geometrically centered while pushing the logo and CTA cluster
+          all the way to the viewport edges (with comfortable gutter padding). */}
+      <div className="w-full px-8 grid grid-cols-[1fr_auto_1fr] items-center gap-6">
 
         {/* Col 1 — Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group justify-self-start">
           <div className="relative w-10 h-10">
             <Image
               src="/AXEM-SX_W64.png"
@@ -41,8 +43,8 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Col 2 — Nav links, perfectly centred */}
-        <ul className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold tracking-wider text-[#f5f0e8]/90" style={{ fontFamily: 'var(--font-allan), serif' }}>
+        {/* Col 2 — Nav links, perfectly centred; whitespace-nowrap prevents wrapping */}
+        <ul className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold tracking-wider text-[#f5f0e8]/90 whitespace-nowrap" style={{ fontFamily: 'var(--font-allan), serif' }}>
           {[
             { label: t('nav.features'), href: '/features' },
             { label: t('nav.about'), href: '/about' },
@@ -57,11 +59,11 @@ export default function Navbar() {
         </ul>
 
         {/* Col 3 — Lang switcher + Download */}
-        <div className="flex items-center gap-4 justify-end">
+        <div className="flex items-center gap-4 justify-end justify-self-end">
           {/* Lang switcher — desktop only */}
           <button
             onClick={toggleLocale}
-            className="hidden md:inline-flex px-3 py-1.5 border border-amber-400/30 hover:border-amber-400/70 text-amber-400/70 hover:text-amber-400 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
+            className="hidden md:inline-flex items-center px-4 py-2.5 border border-amber-400/30 hover:border-amber-400/70 text-amber-400/70 hover:text-amber-400 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
             aria-label="Switch language"
           >
             {router.locale === 'en' ? 'FR' : 'EN'}
@@ -72,7 +74,7 @@ export default function Navbar() {
             href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex px-8 py-4 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-normal uppercase transition-colors duration-200 shadow-lg hover:shadow-amber-400/40"
+            className="hidden md:inline-flex items-center px-10 py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-widest uppercase transition-colors duration-200 shadow-lg hover:shadow-amber-400/40"
           >
             {t('nav.download')}
           </Link>

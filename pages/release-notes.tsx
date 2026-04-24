@@ -57,7 +57,7 @@ export default function ReleaseNotesPage() {
       </div>
 
       <div className="w-full px-6 py-24">
-        <div className="max-w-5xl mx-auto flex flex-col gap-20">
+        <div className="max-w-6xl mx-auto flex flex-col gap-20">
 
           <ReleaseSection num="1" title={t('s1Title')}>
             <p>{t('s1p')}</p>
