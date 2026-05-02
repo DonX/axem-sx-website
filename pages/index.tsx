@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>AXEM-SX — The Digital Workshop</title>
-        <meta name="description" content="AXEM-SX is a refined Linux distribution built for creators, makers, and thinkers. Intelligent. Powerful. Distinctly crafted. Coming May 1st." />
+        <meta name="description" content="AXEM-SX 1.0 — a refined Linux distribution built for creators, makers, and thinkers. Intelligent. Powerful. Distinctly crafted. Available now." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Axem-head-ICON_64x64.png" />
 

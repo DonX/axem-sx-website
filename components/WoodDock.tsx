@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 export default function WoodDock() {
@@ -56,13 +57,14 @@ export default function WoodDock() {
           <p className="text-amber-400/70 text-sm tracking-widest uppercase font-semibold">
             {t('dock.available')}
           </p>
-          <button
-            type="button"
-            disabled
-            className="px-16 py-7 bg-amber-500/20 border-2 border-amber-400/30 text-amber-300/50 font-bold text-xl tracking-normal uppercase cursor-not-allowed"
+          <Link
+            href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-16 py-7 bg-amber-500 hover:bg-amber-400 text-black font-black text-xl tracking-widest uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(201,166,95,0.3)] hover:shadow-[0_4px_36px_rgba(201,166,95,0.5)]"
           >
             {t('dock.comingSoon')}
-          </button>
+          </Link>
           <p className="text-white/30 text-xs tracking-wide text-center">
             {t('dock.builtOn')}
           </p>

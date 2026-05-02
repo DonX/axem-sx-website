@@ -1,18 +1,18 @@
 {
   "metaTitle": "Release Notes",
-  "metaDesc": "AXEM-SX 0.9 Founders Preview release notes — Wayland-only, Boh-IO AI console, Cockpit administration, and sovereignty-first defaults on openSUSE Leap 16.0.",
+  "metaDesc": "AXEM-SX 1.0 release notes — Wayland-only, Boh-IO AI console, Cockpit administration, and sovereignty-first defaults on openSUSE Leap 16.0.",
   "heroHeading": "Release Notes",
   "badgeVersion": "Version", "badgeBase": "Base", "badgeArch": "Arch",
   "labelKnown": "Known Issue", "labelTip": "Tip", "labelWarn": "Warning",
 
-  "s1Title": "Defining the Founders Preview",
-  "s1p": "AXEM-SX 0.9 is a near-complete look at our vision for a sovereignty-oriented workstation. It is built on the developing code of openSUSE Leap 16.0.",
+  "s1Title": "About AXEM-SX 1.0",
+  "s1p": "AXEM-SX 1.0 is the first official release of our sovereignty-oriented workstation. It is built on openSUSE Leap 16.0.",
   "s1card1Label": "Purpose", "s1card1Desc": "Test the Boot-to-Studio workflow and Cockpit-based management.",
   "s1card2Label": "Stability", "s1card2Desc": "Enterprise-grade core with some Beta edges from upstream.",
   "s1card3Label": "Feedback", "s1card3Desc": "Specifically seeking reports on local AI and Wayland on NVIDIA hardware.",
 
   "s2Title": "Desktop Architecture — Strict Wayland",
-  "s2p": "AXEM-SX 0.9 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
+  "s2p": "AXEM-SX 1.0 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
   "s2li1Strong": "Xorg is Gone:", "s2li1": "No fallback X11 session at the login screen.",
   "s2li2Strong": "Legacy App Support:", "s2li2": "Older applications run transparently via XWayland.",
   "s2li3Strong": "NVIDIA Boot-to-Studio:", "s2li3": "Open kernel driver and user-space drivers install automatically on supported GPUs.",

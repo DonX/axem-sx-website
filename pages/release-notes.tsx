@@ -47,7 +47,7 @@ export default function ReleaseNotesPage() {
           <div className="w-8 h-8" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">{t('heroHeading')}</h1>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {([['badgeVersion', '0.9 Founders Preview'], ['badgeBase', 'openSUSE Leap 16.0'], ['badgeArch', 'x86_64-v2 only']] as const).map(([key, val]) => (
+            {([['badgeVersion', '1.0 Stable Release'], ['badgeBase', 'openSUSE Leap 16.0'], ['badgeArch', 'x86_64-v2 only']] as const).map(([key, val]) => (
               <div key={key} className="px-3 py-1 rounded-full border border-amber-400/20 text-xs text-amber-300/70">
                 <span className="text-white/30">{t(key)}: </span>{val}
               </div>
