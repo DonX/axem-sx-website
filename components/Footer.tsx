@@ -57,34 +57,25 @@ export default function Footer() {
           <span className="text-[10px] tracking-widest uppercase text-amber-400/50 font-semibold">{t('footer.project')}</span>
           <ul className="flex flex-col gap-3 text-sm text-white/55 tracking-wide">
             {[
-              { labelKey: 'footer.community', href: '#community', soon: true },
-              { labelKey: 'footer.documentation', href: '#docs', soon: true },
-              { labelKey: 'footer.privacy', href: '#privacy', soon: false },
+              { labelKey: 'footer.community', href: '#community' },
+              { labelKey: 'footer.documentation', href: '#docs' },
             ].map((item) => (
               <li key={item.href}>
-                {item.soon ? (
-                  <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
-                    {t(item.labelKey)}
-                    <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
-                  </span>
-                ) : (
-                  <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
-                    {t(item.labelKey)}
-                  </Link>
-                )}
+                <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
+                  {t(item.labelKey)}
+                  <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
+                </span>
               </li>
             ))}
-            <li>
-              <a
-                href="https://github.com/DonX/axem-sx-website/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-amber-400 transition-colors duration-200 flex items-center gap-1"
-              >
-                🐞 {t('footer.reportBug')}
-              </a>
-            </li>
           </ul>
+          <a
+            href="https://github.com/DonX/axem-sx-website/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-amber-400/40 bg-amber-400/5 text-amber-300 text-sm font-semibold tracking-wide hover:border-amber-400 hover:bg-amber-400/10 hover:text-amber-200 transition-all duration-200 self-center md:self-start"
+          >
+            🐞 {t('footer.reportBug')}
+          </a>
           <div className="mt-2 flex flex-col gap-1">
             <span className="text-[10px] text-white/25 tracking-wide">{t('footer.crafted')}</span>
           </div>
