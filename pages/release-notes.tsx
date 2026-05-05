@@ -2,19 +2,20 @@ import PageLayout from '@/components/PageLayout';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import type { GetStaticProps } from 'next';
+import Image from 'next/image';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: { ...(await serverSideTranslations(locale ?? 'en', ['common', 'release-notes'])) },
 });
 
-function ReleaseSection({ num, title, children }: { num: string; title: string; children: React.ReactNode }) {
+function ReleaseSection({ num, title, children, wide = false }: { num: string; title: string; children: React.ReactNode; wide?: boolean }) {
   return (
     <div className="flex flex-col items-center gap-6 text-center">
       <div className="flex flex-col items-center gap-2">
         <span className="text-xs font-mono text-amber-400/50 uppercase tracking-widest">{num}</span>
         <h2 className="text-2xl md:text-3xl font-bold text-white">{title}</h2>
       </div>
-      <div className="flex flex-col items-center gap-3 text-sm text-white/60 leading-relaxed max-w-2xl mx-auto w-full">
+      <div className={`flex flex-col items-center gap-3 text-sm text-white/60 leading-relaxed mx-auto w-full ${wide ? 'max-w-5xl' : 'max-w-2xl'}`}>
         {children}
       </div>
     </div>
@@ -71,7 +72,50 @@ export default function ReleaseNotesPage() {
             </div>
           </ReleaseSection>
 
-          <ReleaseSection num="2" title={t('s2Title')}>
+          <ReleaseSection num="2" title={t('profilesTitle')} wide>
+            <p>{t('profilesIntro')}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2 w-full">
+              {(['Light', 'Pro', 'Gold'] as const).map(p => (
+                <div key={p} className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-amber-400/10 text-left">
+                  <p className="text-amber-300 font-bold text-sm tracking-wider">{t(`profiles${p}Label`)}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{t(`profiles${p}Desc`)}</p>
+                  <p className="text-xs font-mono text-amber-400/60 uppercase tracking-widest mt-1">{t(`profiles${p}Status`)}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col items-center gap-2 mt-4">
+              <p className="text-xs uppercase tracking-widest text-amber-400/60 font-mono">{t('profilesWhyTitle')}</p>
+              <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-white/70">
+                <li>· {t('profilesWhy1')}</li>
+                <li>· {t('profilesWhy2')}</li>
+                <li>· {t('profilesWhy3')}</li>
+              </ul>
+            </div>
+            <Note type="tip">{t('profilesNote')}</Note>
+          </ReleaseSection>
+
+          <ReleaseSection num="3" title={t('glanceTitle')} wide>
+            <p>{t('glanceIntro')}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2 w-full">
+              {([
+                ['glance1Caption', '/AXEM-ScreenSHOTS/axem-sx-pro-desktop.png'],
+                ['glance2Caption', '/AXEM-ScreenSHOTS/pro-desktop-with-AXEM-SX-TopMenu.png'],
+                ['glance3Caption', '/AXEM-ScreenSHOTS/App-axem-control-hub_shot1.png'],
+                ['glance4Caption', '/AXEM-ScreenSHOTS/App-axem-control-hub-logs.png'],
+                ['glance5Caption', '/AXEM-ScreenSHOTS/App-soft-depot_shot.png'],
+                ['glance6Caption', '/AXEM-ScreenSHOTS/App-Ai-SX-ChatGPT-shot.png'],
+              ] as const).map(([key, src]) => (
+                <figure key={key} className="flex flex-col gap-2">
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-amber-400/15 bg-black">
+                    <Image src={src} alt={t(key)} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-contain" />
+                  </div>
+                  <figcaption className="text-xs text-white/50 text-center">{t(key)}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </ReleaseSection>
+
+          <ReleaseSection num="4" title={t('s2Title')}>
             <p>{t('s2p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -81,7 +125,7 @@ export default function ReleaseNotesPage() {
             <Note type="tip">{t('s2tip')}</Note>
           </ReleaseSection>
 
-          <ReleaseSection num="3" title={t('s3Title')}>
+          <ReleaseSection num="5" title={t('s3Title')}>
             <p>{t('s3p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -90,7 +134,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="4" title={t('s4Title')}>
+          <ReleaseSection num="6" title={t('s4Title')}>
             <p>{t('s4p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2'] as const).map(n => (
@@ -100,7 +144,7 @@ export default function ReleaseNotesPage() {
             <Note type="known">{t('s4known')}</Note>
           </ReleaseSection>
 
-          <ReleaseSection num="5" title={t('s5Title')}>
+          <ReleaseSection num="7" title={t('s5Title')}>
             <p>{t('s5p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -109,7 +153,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="6" title={t('s6Title')}>
+          <ReleaseSection num="8" title={t('s6Title')}>
             <ul className="flex flex-col gap-2">
               {(['1', '2', '3'] as const).map(n => (
                 <li key={n}><strong className="text-white/80">{t(`s6li${n}Strong`)}</strong> {t(`s6li${n}`)}</li>
@@ -117,7 +161,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="7" title={t('s7Title')}>
+          <ReleaseSection num="9" title={t('s7Title')}>
             <ul className="flex flex-col gap-2">
               {(['1', '2', '3'] as const).map(n => (
                 <li key={n}><strong className="text-white/80">{t(`s7li${n}Strong`)}</strong> {t(`s7li${n}`)}</li>
@@ -146,7 +190,7 @@ export default function ReleaseNotesPage() {
             <p className="text-xs text-amber-300/50 italic mt-1">{t('liveCredTip')}</p>
           </div>
 
-          <ReleaseSection num="8" title={t('s8Title')}>
+          <ReleaseSection num="10" title={t('s8Title')}>
             <Note type="known">{t('s8known1')}</Note>
             <Note type="known">{t('s8known2')}</Note>
           </ReleaseSection>

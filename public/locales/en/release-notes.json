@@ -11,6 +11,32 @@
   "s1card2Label": "Stability", "s1card2Desc": "Enterprise-grade core with some Beta edges from upstream.",
   "s1card3Label": "Feedback", "s1card3Desc": "Specifically seeking reports on local AI and Wayland on NVIDIA hardware.",
 
+  "profilesTitle": "AXEM-SX System Profiles",
+  "profilesIntro": "AXEM-SX provides distinct system profiles, each designed as a complete and coherent working environment. Only one profile is intended to be active at a time.",
+  "profilesLightLabel": "Light · LXQt",
+  "profilesLightDesc": "A minimal, fast, accessible Wayland environment designed for essential computing and lower-resource systems.",
+  "profilesLightStatus": "Available now",
+  "profilesProLabel": "Pro · KDE Plasma",
+  "profilesProDesc": "A complete, capable Wayland environment with extended tools and features for advanced users and professional workflows.",
+  "profilesProStatus": "Available now",
+  "profilesGoldLabel": "Gold · GNOME",
+  "profilesGoldDesc": "A polished GNOME Wayland experience for users who prefer the GNOME paradigm — refined, focused, distinct.",
+  "profilesGoldStatus": "Coming before end of 2026",
+  "profilesWhyTitle": "Why one profile at a time",
+  "profilesWhy1": "system clarity",
+  "profilesWhy2": "predictable behavior",
+  "profilesWhy3": "a consistent user experience",
+  "profilesNote": "Advanced users may choose to combine components manually, but AXEM-SX does not rely on mixed-profile configurations by default.",
+
+  "glanceTitle": "A First Glance",
+  "glanceIntro": "A glimpse of the AXEM-SX environment — desktops, menus, and applications curated for sustained, serious work.",
+  "glance1Caption": "Pro Edition Desktop · KDE Plasma Wayland",
+  "glance2Caption": "AXEM-SX Top Menu — curated workshop launcher",
+  "glance3Caption": "AXEM-SX Control Hub — unified system administration",
+  "glance4Caption": "Control Hub Logs — readable, contextual journal view",
+  "glance5Caption": "Soft Depot — curated software catalog",
+  "glance6Caption": "AI-SX ChatGPT — sovereign-by-default AI client",
+
   "s2Title": "Desktop Architecture — Strict Wayland",
   "s2p": "AXEM-SX 1.0 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
   "s2li1Strong": "Xorg is Gone:", "s2li1": "No fallback X11 session at the login screen.",
@@ -54,7 +80,7 @@
   "liveCredValue": "axem",
   "liveCredTip": "Log in with user axem and password axem to access the full live desktop.",
 
-  "s8Title": "Known Issues in Preview",
+  "s8Title": "Known Issues",
   "s8known1": "Installer Network Config: Complex network setups (bonding) are limited during install. Use DHCP for installation, configure via Cockpit after.",
   "s8known2": "Zypper Repository: A bad repository source may be added after install. If zypper complains, remove it with zypper rr 1."
 }
