@@ -3,10 +3,20 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import type { GetStaticProps } from 'next';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: { ...(await serverSideTranslations(locale ?? 'en', ['common', 'release-notes'])) },
 });
+
+const SCREENSHOTS = [
+  { key: 'glance1Caption', src: '/AXEM-ScreenSHOTS/axem-sx-pro-desktop.png' },
+  { key: 'glance2Caption', src: '/AXEM-ScreenSHOTS/pro-desktop-with-AXEM-SX-TopMenu.png' },
+  { key: 'glance3Caption', src: '/AXEM-ScreenSHOTS/App-axem-control-hub_shot1.png' },
+  { key: 'glance4Caption', src: '/AXEM-ScreenSHOTS/App-axem-control-hub-logs.png' },
+  { key: 'glance5Caption', src: '/AXEM-ScreenSHOTS/App-soft-depot_shot.png' },
+  { key: 'glance6Caption', src: '/AXEM-ScreenSHOTS/App-Ai-SX-ChatGPT-shot.png' },
+] as const;
 
 function ReleaseSection({ num, title, children, wide = false }: { num: string; title: string; children: React.ReactNode; wide?: boolean }) {
   return (
@@ -39,6 +49,24 @@ function Note({ type, children }: { type: 'known' | 'tip' | 'warn'; children: Re
 
 export default function ReleaseNotesPage() {
   const { t } = useTranslation('release-notes');
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (openIdx === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenIdx(null);
+      if (e.key === 'ArrowRight') setOpenIdx(i => (i === null ? null : (i + 1) % SCREENSHOTS.length));
+      if (e.key === 'ArrowLeft') setOpenIdx(i => (i === null ? null : (i - 1 + SCREENSHOTS.length) % SCREENSHOTS.length));
+    };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [openIdx]);
+
   return (
     <PageLayout title={t('metaTitle')} description={t('metaDesc')}>
       {/* Hero */}
@@ -96,23 +124,21 @@ export default function ReleaseNotesPage() {
 
           <ReleaseSection num="3" title={t('glanceTitle')} wide>
             <p>{t('glanceIntro')}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2 w-full">
-              {([
-                ['glance1Caption', '/AXEM-ScreenSHOTS/axem-sx-pro-desktop.png'],
-                ['glance2Caption', '/AXEM-ScreenSHOTS/pro-desktop-with-AXEM-SX-TopMenu.png'],
-                ['glance3Caption', '/AXEM-ScreenSHOTS/App-axem-control-hub_shot1.png'],
-                ['glance4Caption', '/AXEM-ScreenSHOTS/App-axem-control-hub-logs.png'],
-                ['glance5Caption', '/AXEM-ScreenSHOTS/App-soft-depot_shot.png'],
-                ['glance6Caption', '/AXEM-ScreenSHOTS/App-Ai-SX-ChatGPT-shot.png'],
-              ] as const).map(([key, src]) => (
-                <figure key={key} className="flex flex-col gap-2">
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-amber-400/15 bg-black">
-                    <Image src={src} alt={t(key)} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-contain" />
-                  </div>
-                  <figcaption className="text-xs text-white/50 text-center">{t(key)}</figcaption>
-                </figure>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2 w-full">
+              {SCREENSHOTS.map((s, i) => (
+                <button
+                  key={s.key}
+                  type="button"
+                  onClick={() => setOpenIdx(i)}
+                  aria-label={t(s.key)}
+                  className="group relative aspect-[16/10] rounded-lg overflow-hidden border border-amber-400/15 bg-black hover:border-amber-400/50 focus:outline-none focus:ring-2 focus:ring-amber-400/60 transition"
+                >
+                  <Image src={s.src} alt={t(s.key)} fill sizes="(min-width: 640px) 33vw, 50vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+                  <span className="absolute inset-x-0 bottom-0 px-2 py-1.5 text-[10px] leading-tight text-white/90 text-left bg-gradient-to-t from-black/85 via-black/40 to-transparent line-clamp-2">{t(s.key)}</span>
+                </button>
               ))}
             </div>
+            <p className="text-xs text-amber-300/50 italic mt-1">{t('glanceHint')}</p>
           </ReleaseSection>
 
           <ReleaseSection num="4" title={t('s2Title')}>
@@ -197,6 +223,55 @@ export default function ReleaseNotesPage() {
 
         </div>
       </div>
+
+      {/* Lightbox */}
+      {openIdx !== null && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={t(SCREENSHOTS[openIdx].key)}
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/95 backdrop-blur-sm p-4 sm:p-8"
+          onClick={() => setOpenIdx(null)}
+        >
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpenIdx(null); }}
+            aria-label={t('glanceClose')}
+            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl leading-none focus:outline-none focus:ring-2 focus:ring-amber-400/60"
+          >×</button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpenIdx((openIdx - 1 + SCREENSHOTS.length) % SCREENSHOTS.length); }}
+            aria-label={t('glancePrev')}
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white text-3xl leading-none focus:outline-none focus:ring-2 focus:ring-amber-400/60"
+          >‹</button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOpenIdx((openIdx + 1) % SCREENSHOTS.length); }}
+            aria-label={t('glanceNext')}
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white text-3xl leading-none focus:outline-none focus:ring-2 focus:ring-amber-400/60"
+          >›</button>
+          <div
+            className="relative w-full h-full max-w-7xl flex flex-col items-center justify-center gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative w-full flex-1 min-h-0">
+              <Image
+                src={SCREENSHOTS[openIdx].src}
+                alt={t(SCREENSHOTS[openIdx].key)}
+                fill
+                sizes="100vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+            <p className="text-sm text-white/80 text-center px-12">
+              {t(SCREENSHOTS[openIdx].key)}
+              <span className="ml-3 text-white/40 font-mono text-xs">{openIdx + 1} / {SCREENSHOTS.length}</span>
+            </p>
+          </div>
+        </div>
+      )}
     </PageLayout>
   );
 }

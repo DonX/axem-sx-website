@@ -36,6 +36,10 @@
   "glance4Caption": "Control Hub Logs — readable, contextual journal view",
   "glance5Caption": "Soft Depot — curated software catalog",
   "glance6Caption": "AI-SX ChatGPT — sovereign-by-default AI client",
+  "glanceClose": "Close",
+  "glancePrev": "Previous screenshot",
+  "glanceNext": "Next screenshot",
+  "glanceHint": "Click any thumbnail to view full size",
 
   "s2Title": "Desktop Architecture — Strict Wayland",
   "s2p": "AXEM-SX 1.0 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
