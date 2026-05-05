@@ -57,14 +57,21 @@ export default function Footer() {
           <span className="text-[10px] tracking-widest uppercase text-amber-400/50 font-semibold">{t('footer.project')}</span>
           <ul className="flex flex-col gap-3 text-sm text-white/55 tracking-wide">
             {[
-              { labelKey: 'footer.community', href: '#community' },
-              { labelKey: 'footer.documentation', href: '#docs' },
-              { labelKey: 'footer.privacy', href: '#privacy' },
+              { labelKey: 'footer.community', href: '#community', soon: true },
+              { labelKey: 'footer.documentation', href: '#docs', soon: true },
+              { labelKey: 'footer.privacy', href: '#privacy', soon: false },
             ].map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
-                  {t(item.labelKey)}
-                </Link>
+                {item.soon ? (
+                  <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
+                    {t(item.labelKey)}
+                    <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
+                  </span>
+                ) : (
+                  <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
+                    {t(item.labelKey)}
+                  </Link>
+                )}
               </li>
             ))}
             <li>
@@ -79,7 +86,6 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-2 flex flex-col gap-1">
-            <span className="text-[10px] text-white/25 tracking-wide">{t('footer.inspired')}</span>
             <span className="text-[10px] text-white/25 tracking-wide">{t('footer.crafted')}</span>
           </div>
         </div>
