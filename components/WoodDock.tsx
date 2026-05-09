@@ -58,7 +58,7 @@ export default function WoodDock() {
             {t('dock.available')}
           </p>
           <Link
-            href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
+            href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0.1/axem-sx-pro.x86_64-1.0.1.iso/download"
             target="_blank"
             rel="noopener noreferrer"
             className="px-16 py-7 bg-amber-500 hover:bg-amber-400 text-black font-black text-xl tracking-widest uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(201,166,95,0.3)] hover:shadow-[0_4px_36px_rgba(201,166,95,0.5)]"

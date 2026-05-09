@@ -1,0 +1,48 @@
+{
+  "metaTitle": "Support & Help",
+  "metaDesc": "AXEM-SX 1.0.1 support — first-command quick start, troubleshooting FAQ, and how to reach the team for bugs and feedback.",
+  "heroHeading": "Support",
+  "heroAccent": "& Help",
+  "heroSub": "You landed here from your AXEM-SX desktop, or from a link on the site. Either way — welcome. The pages below cover the few things most people ask after a fresh install.",
+
+  "quickTitle": "Full Desktop in One Command",
+  "quickIntro": "The AXEM-SX 1.0.1 ISO is intentionally slim. After install, one zypper line unlocks the full curated experience — LibreOffice, Inkscape, VLC, codecs, Flatpak with Flathub, and the guided third-party installer.",
+  "quickProLabel": "Pro · KDE Plasma 6",
+  "quickLightLabel": "Light · LXQt",
+  "quickGoldLabel": "Gold · GNOME 48",
+  "quickGoldStatus": "(coming soon)",
+  "quickFooter": "Each *-full package is a wrapper. Uninstalling it does not remove the apps. You stay in control.",
+
+  "faqTitle": "Quick Troubleshooting",
+  "faqIntro": "The handful of things that come up often, with the exact fix.",
+
+  "faq1Q": "Black screen during install or first boot",
+  "faq1A": "Reboot, and at the GRUB / installer menu press e to edit the kernel line. Add nomodeset at the end of the linux line, then press F10 or Ctrl-X to boot. Common on older NVIDIA / Optimus laptops. Once installed, the persistent fix is to install the proper NVIDIA driver via the AXEM Control Hub.",
+
+  "faq2Q": "Trash and Home icons appeared on my Pro desktop",
+  "faq2A": "Cosmetic only — a Plasma containment / pcmanfm-qt artifact on first login. Right-click each icon and remove. AXEM Pro routes Trash through the top panel by design; it is not lost.",
+
+  "faq3Q": "zypper complains about a bad repository",
+  "faq3A": "List your repos with sudo zypper lr, identify the bad one (often added by the installer), and remove it: sudo zypper rr <number-or-alias>. Then refresh: sudo zypper ref. The AXEM-SX repo and Packman repo (opt-in) are the only third-party sources we ship.",
+
+  "faq4Q": "Some videos or H.265 / AAC files won't play",
+  "faq4A": "Run the Packman vendor swap once: sudo /usr/bin/axem-sx-codecs-upgrade-to-packman. This enables full multimedia codec coverage (H.265, AAC encode, etc.). One-time switch.",
+
+  "faq5Q": "I want Spotify, Discord, VS Code, or Anti-Gravity",
+  "faq5A": "Run axem-sx-install-thirdparty in a terminal. A whiptail menu lets you pick what you want — installed via Flathub or upstream OBS. No surprises, no auto-installs.",
+
+  "faq6Q": "How do I keep the system up to date?",
+  "faq6A": "sudo zypper update — standard openSUSE Leap 16.0 maintenance. Always safe, always Leap-compatible. AXEM-SX adds curated identity on top of a real Leap install.",
+
+  "liveTitle": "Testing from the Live ISO?",
+  "liveBody": "Both the Light and Pro ISOs boot into a live session. No installation required to try things out.",
+  "liveUser": "Live user",
+  "livePass": "Password",
+  "liveValue": "axem",
+  "liveTip": "Log in with user axem and password axem to access the full live desktop.",
+
+  "reachTitle": "Report a Bug · Send Feedback",
+  "reachBody": "AXEM-SX is built in the open. The fastest way to reach the team is the GitHub issue tracker — bug reports, hardware compatibility notes, ideas, criticism. All welcome.",
+  "reachCta": "🐞 Open the Issue Tracker",
+  "reachNote": "We read every issue. We do not collect emails, names, or any user data on this site or in the OS — there is nothing to subscribe to. The tracker is where the conversation happens."
+}

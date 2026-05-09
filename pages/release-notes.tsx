@@ -76,7 +76,7 @@ export default function ReleaseNotesPage() {
           <div className="w-8 h-8" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">{t('heroHeading')}</h1>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {([['badgeVersion', '1.0 Stable Release'], ['badgeBase', 'openSUSE Leap 16.0'], ['badgeArch', 'x86_64-v2 only']] as const).map(([key, val]) => (
+            {([['badgeVersion', '1.0.1 Stable Release'], ['badgeBase', 'openSUSE Leap 16.0'], ['badgeArch', 'x86_64-v2 only']] as const).map(([key, val]) => (
               <div key={key} className="px-3 py-1 rounded-full border border-amber-400/20 text-xs text-amber-300/70">
                 <span className="text-white/30">{t(key)}: </span>{val}
               </div>
@@ -100,7 +100,28 @@ export default function ReleaseNotesPage() {
             </div>
           </ReleaseSection>
 
-          <ReleaseSection num="2" title={t('profilesTitle')} wide>
+          <ReleaseSection num="2" title={t('firstCmdTitle')} wide>
+            <p>{t('firstCmdIntro')}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2 w-full">
+              {([
+                { key: 'Pro', pkg: 'axem-sx-pro-full', muted: false },
+                { key: 'Light', pkg: 'axem-sx-light-full', muted: false },
+                { key: 'Gold', pkg: 'axem-sx-gold-full', muted: true },
+              ] as const).map(c => (
+                <div key={c.key} className={`flex flex-col gap-2 p-5 rounded-xl bg-black/40 border text-left ${c.muted ? 'border-amber-400/5 opacity-60' : 'border-amber-400/20'}`}>
+                  <p className="text-amber-300 font-bold text-sm tracking-wider">{t(`firstCmd${c.key}Label`)}</p>
+                  <pre className="text-xs font-mono text-amber-100/90 bg-black/60 rounded-md p-3 overflow-x-auto leading-relaxed border border-amber-400/10"><code>sudo zypper refresh
+sudo zypper install {c.pkg}</code></pre>
+                  {c.muted && (
+                    <p className="text-xs font-mono text-amber-400/50 uppercase tracking-widest">{t('firstCmdGoldStatus')}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+            <Note type="tip">{t('firstCmdGoFurther')}</Note>
+          </ReleaseSection>
+
+          <ReleaseSection num="3" title={t('profilesTitle')} wide>
             <p>{t('profilesIntro')}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2 w-full">
               {(['Light', 'Pro', 'Gold'] as const).map(p => (
@@ -122,7 +143,7 @@ export default function ReleaseNotesPage() {
             <Note type="tip">{t('profilesNote')}</Note>
           </ReleaseSection>
 
-          <ReleaseSection num="3" title={t('glanceTitle')} wide>
+          <ReleaseSection num="4" title={t('glanceTitle')} wide>
             <p>{t('glanceIntro')}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2 w-full">
               {SCREENSHOTS.map((s, i) => (
@@ -141,7 +162,7 @@ export default function ReleaseNotesPage() {
             <p className="text-xs text-amber-300/50 italic mt-1">{t('glanceHint')}</p>
           </ReleaseSection>
 
-          <ReleaseSection num="4" title={t('s2Title')}>
+          <ReleaseSection num="5" title={t('s2Title')}>
             <p>{t('s2p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -151,7 +172,7 @@ export default function ReleaseNotesPage() {
             <Note type="tip">{t('s2tip')}</Note>
           </ReleaseSection>
 
-          <ReleaseSection num="5" title={t('s3Title')}>
+          <ReleaseSection num="6" title={t('s3Title')}>
             <p>{t('s3p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -160,7 +181,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="6" title={t('s4Title')}>
+          <ReleaseSection num="7" title={t('s4Title')}>
             <p>{t('s4p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2'] as const).map(n => (
@@ -170,7 +191,7 @@ export default function ReleaseNotesPage() {
             <Note type="known">{t('s4known')}</Note>
           </ReleaseSection>
 
-          <ReleaseSection num="7" title={t('s5Title')}>
+          <ReleaseSection num="8" title={t('s5Title')}>
             <p>{t('s5p')}</p>
             <ul className="flex flex-col gap-2 mt-1">
               {(['1', '2', '3'] as const).map(n => (
@@ -179,7 +200,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="8" title={t('s6Title')}>
+          <ReleaseSection num="9" title={t('s6Title')}>
             <ul className="flex flex-col gap-2">
               {(['1', '2', '3'] as const).map(n => (
                 <li key={n}><strong className="text-white/80">{t(`s6li${n}Strong`)}</strong> {t(`s6li${n}`)}</li>
@@ -187,7 +208,7 @@ export default function ReleaseNotesPage() {
             </ul>
           </ReleaseSection>
 
-          <ReleaseSection num="9" title={t('s7Title')}>
+          <ReleaseSection num="10" title={t('s7Title')}>
             <ul className="flex flex-col gap-2">
               {(['1', '2', '3'] as const).map(n => (
                 <li key={n}><strong className="text-white/80">{t(`s7li${n}Strong`)}</strong> {t(`s7li${n}`)}</li>
@@ -216,9 +237,10 @@ export default function ReleaseNotesPage() {
             <p className="text-xs text-amber-300/50 italic mt-1">{t('liveCredTip')}</p>
           </div>
 
-          <ReleaseSection num="10" title={t('s8Title')}>
+          <ReleaseSection num="11" title={t('s8Title')}>
             <Note type="known">{t('s8known1')}</Note>
             <Note type="known">{t('s8known2')}</Note>
+            <Note type="known">{t('s8known3')}</Note>
           </ReleaseSection>
 
         </div>

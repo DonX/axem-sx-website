@@ -71,7 +71,7 @@ export default function Navbar() {
 
           {/* Download CTA — desktop only */}
           <Link
-            href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
+            href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0.1/axem-sx-pro.x86_64-1.0.1.iso/download"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center px-10 py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-widest uppercase transition-colors duration-200 shadow-lg hover:shadow-amber-400/40"

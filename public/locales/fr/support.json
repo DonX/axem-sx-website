@@ -1,0 +1,48 @@
+{
+  "metaTitle": "Aide et support",
+  "metaDesc": "Support AXEM-SX 1.0.1 — démarrage en une commande, FAQ de dépannage, et comment nous joindre pour les bogues et retours.",
+  "heroHeading": "Aide",
+  "heroAccent": "et support",
+  "heroSub": "Vous arrivez ici depuis votre bureau AXEM-SX, ou depuis un lien sur le site. Dans tous les cas — bienvenue. Les sections ci-dessous couvrent les rares questions qui reviennent après une installation fraîche.",
+
+  "quickTitle": "Bureau complet en une commande",
+  "quickIntro": "L'ISO AXEM-SX 1.0.1 est volontairement épurée. Après l'installation, une seule ligne zypper débloque l'expérience curée complète — LibreOffice, Inkscape, VLC, codecs, Flatpak avec Flathub, et l'installateur guidé d'applications tierces.",
+  "quickProLabel": "Pro · KDE Plasma 6",
+  "quickLightLabel": "Light · LXQt",
+  "quickGoldLabel": "Gold · GNOME 48",
+  "quickGoldStatus": "(à venir)",
+  "quickFooter": "Chaque paquet *-full est un emballage. Le désinstaller ne supprime pas les applications. Vous gardez le contrôle.",
+
+  "faqTitle": "Dépannage rapide",
+  "faqIntro": "Les quelques cas qui reviennent souvent, avec le correctif exact.",
+
+  "faq1Q": "Écran noir pendant l'installation ou au premier démarrage",
+  "faq1A": "Redémarrez et, au menu GRUB / installateur, appuyez sur e pour éditer la ligne du noyau. Ajoutez nomodeset à la fin de la ligne linux, puis F10 ou Ctrl-X pour démarrer. Courant sur les anciens portables NVIDIA / Optimus. Une fois installé, le correctif persistant consiste à installer le pilote NVIDIA approprié via le Centre de contrôle AXEM.",
+
+  "faq2Q": "Les icônes Corbeille et Dossier personnel sont apparues sur mon bureau Pro",
+  "faq2A": "Cosmétique uniquement — un artefact Plasma containment / pcmanfm-qt à la première connexion. Faites un clic droit sur chaque icône et retirez-la. AXEM Pro achemine la Corbeille via le panneau supérieur par conception ; elle n'est pas perdue.",
+
+  "faq3Q": "zypper se plaint d'un dépôt invalide",
+  "faq3A": "Listez vos dépôts avec sudo zypper lr, identifiez le dépôt invalide (souvent ajouté par l'installateur), et retirez-le : sudo zypper rr <numéro-ou-alias>. Puis rafraîchissez : sudo zypper ref. Le dépôt AXEM-SX et le dépôt Packman (opt-in) sont les seules sources tierces que nous fournissons.",
+
+  "faq4Q": "Certaines vidéos ou fichiers H.265 / AAC ne se lisent pas",
+  "faq4A": "Exécutez le basculement vendeur Packman une fois : sudo /usr/bin/axem-sx-codecs-upgrade-to-packman. Cela active la couverture complète des codecs multimédias (H.265, encodage AAC, etc.). Bascule unique.",
+
+  "faq5Q": "Je veux Spotify, Discord, VS Code ou Anti-Gravity",
+  "faq5A": "Exécutez axem-sx-install-thirdparty dans un terminal. Un menu whiptail vous permet de choisir — installé via Flathub ou OBS amont. Sans surprises, sans installation automatique.",
+
+  "faq6Q": "Comment garder le système à jour ?",
+  "faq6A": "sudo zypper update — maintenance openSUSE Leap 16.0 standard. Toujours sûre, toujours compatible Leap. AXEM-SX ajoute une identité curée par-dessus une vraie installation Leap.",
+
+  "liveTitle": "Vous testez depuis l'ISO live ?",
+  "liveBody": "Les deux ISOs (Light et Pro) démarrent en session live. Aucune installation requise pour essayer.",
+  "liveUser": "Utilisateur live",
+  "livePass": "Mot de passe",
+  "liveValue": "axem",
+  "liveTip": "Connectez-vous avec l'utilisateur axem et le mot de passe axem pour accéder au bureau live complet.",
+
+  "reachTitle": "Signaler un bogue · Envoyer un retour",
+  "reachBody": "AXEM-SX est construit à découvert. Le moyen le plus rapide de joindre l'équipe est le suivi d'incidents GitHub — rapports de bogues, notes de compatibilité matérielle, idées, critiques. Tout est bienvenu.",
+  "reachCta": "🐞 Ouvrir le suivi d'incidents",
+  "reachNote": "Nous lisons chaque rapport. Nous ne collectons aucun e-mail, nom ou donnée utilisateur sur ce site ni dans le système — il n'y a rien à quoi s'abonner. Le suivi d'incidents est l'endroit où la conversation se passe."
+}

@@ -57,7 +57,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-6">
             {/* Light Edition */}
             <Link
-              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-light.x86_64-1.0.0.iso/download"
+              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0.1/axem-sx-light.x86_64-1.0.1.iso/download"
               target="_blank"
               rel="noopener noreferrer"
               className="px-16 py-7 bg-amber-500 hover:bg-amber-400 text-[#6B0F1A] font-black text-xl tracking-normal uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(201,166,95,0.3)] hover:shadow-[0_4px_36px_rgba(201,166,95,0.5)]"
@@ -66,7 +66,7 @@ export default function HeroSection() {
             </Link>
             {/* Pro Edition */}
             <Link
-              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0/axem-sx-pro.x86_64-1.0.0.iso/download"
+              href="https://sourceforge.net/projects/axem-sx/files/releases/v1.0.1/axem-sx-pro.x86_64-1.0.1.iso/download"
               target="_blank"
               rel="noopener noreferrer"
               className="px-16 py-7 bg-[#1a1612] border-2 border-amber-400/70 hover:border-amber-400 text-amber-400 hover:text-amber-300 font-black text-xl tracking-normal uppercase transition-colors duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"

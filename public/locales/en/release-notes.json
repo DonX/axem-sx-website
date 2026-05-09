@@ -1,25 +1,33 @@
 {
   "metaTitle": "Release Notes",
-  "metaDesc": "AXEM-SX 1.0 release notes — Wayland-only, Boh-IO AI console, Cockpit administration, and sovereignty-first defaults on openSUSE Leap 16.0.",
+  "metaDesc": "AXEM-SX 1.0.1 release notes — slim ISO, full curated desktop in one zypper command, Wayland-only, Boh-IO AI console, Cockpit administration on openSUSE Leap 16.0.",
   "heroHeading": "Release Notes",
   "badgeVersion": "Version", "badgeBase": "Base", "badgeArch": "Arch",
   "labelKnown": "Known Issue", "labelTip": "Tip", "labelWarn": "Warning",
 
-  "s1Title": "About AXEM-SX 1.0",
-  "s1p": "AXEM-SX 1.0 is the first official release of our sovereignty-oriented workstation. It is built on openSUSE Leap 16.0.",
+  "s1Title": "About AXEM-SX 1.0.1",
+  "s1p": "AXEM-SX 1.0.1 is the latest release of the 1.0 stable line — a sovereignty-oriented workstation built on openSUSE Leap 16.0. The ISO ships slim by design, and one zypper command unlocks the full curated desktop.",
   "s1card1Label": "Purpose", "s1card1Desc": "Test the Boot-to-Studio workflow and Cockpit-based management.",
   "s1card2Label": "Stability", "s1card2Desc": "Enterprise-grade core with some Beta edges from upstream.",
   "s1card3Label": "Feedback", "s1card3Desc": "Specifically seeking reports on local AI and Wayland on NVIDIA hardware.",
+
+  "firstCmdTitle": "Full Desktop in One Command",
+  "firstCmdIntro": "The ISO is intentionally slim — fast to download, fast to boot. After a quick zypper refresh, a single command unlocks the full curated experience: LibreOffice, Inkscape, VLC, multimedia codecs, Flatpak with Flathub, and the guided third-party app installer.",
+  "firstCmdProLabel": "Pro · KDE Plasma 6",
+  "firstCmdLightLabel": "Light · LXQt",
+  "firstCmdGoldLabel": "Gold · GNOME 48",
+  "firstCmdGoldStatus": "(coming soon)",
+  "firstCmdGoFurther": "Want more? Run axem-sx-install-thirdparty for a guided menu of Spotify, Discord, VS Code (Flathub) and Anti-Gravity (OBS). For full multimedia codec coverage (H.265, AAC encode), run sudo /usr/bin/axem-sx-codecs-upgrade-to-packman.",
 
   "profilesTitle": "AXEM-SX System Profiles",
   "profilesIntro": "AXEM-SX provides distinct system profiles, each designed as a complete and coherent working environment. Only one profile is intended to be active at a time.",
   "profilesLightLabel": "Light · LXQt",
   "profilesLightDesc": "A minimal, fast, accessible Wayland environment designed for essential computing and lower-resource systems.",
   "profilesLightStatus": "Available now",
-  "profilesProLabel": "Pro · KDE Plasma",
+  "profilesProLabel": "Pro · KDE Plasma 6",
   "profilesProDesc": "A complete, capable Wayland environment with extended tools and features for advanced users and professional workflows.",
   "profilesProStatus": "Available now",
-  "profilesGoldLabel": "Gold · GNOME",
+  "profilesGoldLabel": "Gold · GNOME 48",
   "profilesGoldDesc": "A polished GNOME Wayland experience for users who prefer the GNOME paradigm — refined, focused, distinct.",
   "profilesGoldStatus": "Coming before end of 2026",
   "profilesWhyTitle": "Why one profile at a time",
@@ -42,7 +50,7 @@
   "glanceHint": "Click any thumbnail to view full size",
 
   "s2Title": "Desktop Architecture — Strict Wayland",
-  "s2p": "AXEM-SX 1.0 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
+  "s2p": "AXEM-SX 1.0.1 is a pure Wayland system. We have aligned fully with the upstream decision to remove legacy display servers.",
   "s2li1Strong": "Xorg is Gone:", "s2li1": "No fallback X11 session at the login screen.",
   "s2li2Strong": "Legacy App Support:", "s2li2": "Older applications run transparently via XWayland.",
   "s2li3Strong": "NVIDIA Boot-to-Studio:", "s2li3": "Open kernel driver and user-space drivers install automatically on supported GPUs.",
@@ -52,7 +60,7 @@
   "s3p": "AXEM-SX introduces Boh-IO — Bridge Our Humanities with Input & Output. A specialized console with a Bash terminal on the left and a local AI Sidecar on the right.",
   "s3li1Strong": "Local & Private:", "s3li1": "axem-sx/boh-io via Ollama. No data leaves your machine. History exists only in RAM.",
   "s3li2Strong": "Setup required:", "s3li2": "The axem-console package is in both ISOs. The BOH IO model (~2 GB) is downloaded separately via: ollama pull axem-sx/boh-io",
-  "s3li3Strong": "Status in 1.0:", "s3li3": "Active — see the Features page for the full step-by-step setup guide.",
+  "s3li3Strong": "Status in 1.0.1:", "s3li3": "Active — see the Features page for the full step-by-step setup guide.",
 
   "s4Title": "System Administration — Cockpit",
   "s4p": "Unlike most distributions that have dropped YaST entirely in favor of generic web tools, AXEM-SX preserves and curates YaST through the AXEM-SX Control Hub — giving you the power of a proven administration layer with a refined, workstation-focused interface alongside Cockpit.",
@@ -86,5 +94,6 @@
 
   "s8Title": "Known Issues",
   "s8known1": "Installer Network Config: Complex network setups (bonding) are limited during install. Use DHCP for installation, configure via Cockpit after.",
-  "s8known2": "Zypper Repository: A bad repository source may be added after install. If zypper complains, remove it with zypper rr 1."
+  "s8known2": "Zypper Repository: A bad repository source may be added after install. If zypper complains, remove it with zypper rr 1.",
+  "s8known3": "Pro Desktop Icons: Trash and Home icons may appear on the desktop after first login (Plasma containment / pcmanfm-qt artifact). Right-click and remove them — AXEM Pro routes Trash through the top panel by design."
 }
