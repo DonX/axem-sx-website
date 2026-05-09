@@ -3,7 +3,16 @@
   "metaDesc": "AXEM-SX 1.0.1 release notes — slim ISO, full curated desktop in one zypper command, Wayland-only, Boh-IO AI console, Cockpit administration on openSUSE Leap 16.0.",
   "heroHeading": "Release Notes",
   "badgeVersion": "Version", "badgeBase": "Base", "badgeArch": "Arch",
-  "labelKnown": "Known Issue", "labelTip": "Tip", "labelWarn": "Warning",
+  "labelKnown": "Known Issue", "labelIrritant": "Irritant", "labelTip": "Tip", "labelWarn": "Warning",
+
+  "resumeEyebrow": "What's New in 1.0.1",
+  "resumeHeadline": "The one-command full experience",
+  "resumeIntro": "AXEM-SX 1.0.1 keeps the ISO slim by design — fast to download, fast to boot. After install, a single zypper line unlocks the full curated desktop. Highlights below; full notes follow.",
+  "resumeH1Strong": "Slim ISO by design.", "resumeH1": "The download is small. The full curated experience is one zypper command away — on your terms.",
+  "resumeH2Strong": "One-command edition wrappers.", "resumeH2": "axem-sx-pro-full, axem-sx-light-full, and axem-sx-gold-full (coming) pull apps, codecs, Flatpak, and the guided third-party installer in a single line.",
+  "resumeH3Strong": "Repository plumbing fixed.", "resumeH3": "$releasever expansion now resolves cleanly to 16.0 on first boot. No more half-broken refresh cycles.",
+  "resumeH4Strong": "Branding refresh.", "resumeH4": "Updated Plymouth boot splash, SDDM login, and wallpapers across all editions.",
+  "resumeReadMore": "Continue reading below for full release notes.",
 
   "s1Title": "About AXEM-SX 1.0.1",
   "s1p": "AXEM-SX 1.0.1 is the latest release of the 1.0 stable line — a sovereignty-oriented workstation built on openSUSE Leap 16.0. The ISO ships slim by design, and one zypper command unlocks the full curated desktop.",

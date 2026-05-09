@@ -32,16 +32,18 @@ function ReleaseSection({ num, title, children, wide = false }: { num: string; t
   );
 }
 
-function Note({ type, children }: { type: 'known' | 'tip' | 'warn'; children: React.ReactNode }) {
+function Note({ type, children }: { type: 'known' | 'irritant' | 'tip' | 'warn'; children: React.ReactNode }) {
+  const { t } = useTranslation('release-notes');
   const styles = {
     known: 'border-amber-400/20 bg-amber-400/5 text-amber-200/70',
+    irritant: 'border-stone-400/15 bg-stone-400/5 text-stone-200/60',
     tip: 'border-green-400/20 bg-green-400/5 text-green-200/70',
     warn: 'border-red-400/20 bg-red-400/5 text-red-200/70',
   };
-  const labels = { known: 'Known Issue', tip: 'Tip', warn: 'Warning' };
+  const labelKeys = { known: 'labelKnown', irritant: 'labelIrritant', tip: 'labelTip', warn: 'labelWarn' };
   return (
     <div className={`px-4 py-3 rounded-xl border ${styles[type]} flex gap-3`}>
-      <span className="font-bold text-xs uppercase tracking-wider shrink-0 mt-0.5">{labels[type]}:</span>
+      <span className="font-bold text-xs uppercase tracking-wider shrink-0 mt-0.5">{t(labelKeys[type])}:</span>
       <span>{children}</span>
     </div>
   );
@@ -87,6 +89,26 @@ export default function ReleaseNotesPage() {
 
       <div className="w-full px-6 py-24">
         <div className="max-w-6xl mx-auto flex flex-col gap-20">
+
+          <div className="mx-auto w-full max-w-4xl rounded-2xl border border-amber-400/30 bg-amber-400/5 p-6 md:p-8 flex flex-col gap-5 text-left">
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-mono text-amber-400/70 uppercase tracking-widest">{t('resumeEyebrow')}</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">{t('resumeHeadline')}</h2>
+              <p className="text-sm text-white/60 leading-relaxed">{t('resumeIntro')}</p>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {(['1', '2', '3', '4'] as const).map(n => (
+                <li key={n} className="flex gap-3 p-3 rounded-xl bg-black/30 border border-amber-400/10">
+                  <span className="text-amber-400 shrink-0 mt-0.5">◆</span>
+                  <span className="text-sm text-white/70 leading-relaxed">
+                    <strong className="text-amber-200 font-semibold">{t(`resumeH${n}Strong`)}</strong>{' '}
+                    {t(`resumeH${n}`)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs text-white/40 italic">{t('resumeReadMore')}</p>
+          </div>
 
           <ReleaseSection num="1" title={t('s1Title')}>
             <p>{t('s1p')}</p>
@@ -188,7 +210,7 @@ sudo zypper install {c.pkg}</code></pre>
                 <li key={n}><strong className="text-white/80">{t(`s4li${n}Strong`)}</strong> {t(`s4li${n}`)}</li>
               ))}
             </ul>
-            <Note type="known">{t('s4known')}</Note>
+            <Note type="irritant">{t('s4known')}</Note>
           </ReleaseSection>
 
           <ReleaseSection num="8" title={t('s5Title')}>
@@ -240,7 +262,7 @@ sudo zypper install {c.pkg}</code></pre>
           <ReleaseSection num="11" title={t('s8Title')}>
             <Note type="known">{t('s8known1')}</Note>
             <Note type="known">{t('s8known2')}</Note>
-            <Note type="known">{t('s8known3')}</Note>
+            <Note type="irritant">{t('s8known3')}</Note>
           </ReleaseSection>
 
         </div>

@@ -1,0 +1,64 @@
+{
+  "_comment": "AXEM-SX Distribution — maps every OBS package to its ISO tier",
+  "_paths": {
+    "kiwi": "/home/don-x/axem-factory",
+    "obs":  "/home/don-x/Projects/obs/home:L_Don_X/home:L_Don_X",
+    "dev":  "/home/don-x/Projects/AXEM-SX-Distro"
+  },
+  "shared": {
+    "description": "Installed on ALL three ISOs",
+    "packages": ["branding-axem-sx", "axem-panel", "axem-control-hub", "soft-depot", "axem-release", "axem-sx-repos", "patterns-axem-sx"]
+  },
+  "light": {
+    "description": "ISO1 — LXQt / Wayland",
+    "status": "active",
+    "packages": ["patterns-axem-sx-light", "axem-sx-light-image", "axem-sx-dock"],
+    "notes": "axem-panel=PRIMARY shell. axem-sx-dock=PRIMARY."
+  },
+  "pro": {
+    "description": "ISO2 — KDE Plasma 6 / Wayland",
+    "status": "active",
+    "packages": ["patterns-axem-sx-pro", "axem-sx-pro-image", "axem-sx-dock"],
+    "notes": "KDE panel replaces axem-panel. axem-sx-dock included. axem-panel via soft-depot only."
+  },
+  "gold": {
+    "description": "ISO3 — GNOME 48 / Wayland + AXEM dark + gold identity",
+    "status": "planned",
+    "packages": ["patterns-axem-sx-gold", "axem-sx-gold-image"],
+    "notes": "Pure GNOME Shell UX. No axem-panel, no axem-sx-dock. axem-control-hub + soft-depot + axem-console only."
+  },
+  "meta_packages": {
+    "_comment": "v1.0.1 user-facing wrapper packages. ISO stays slim; users opt into the full curated experience via one zypper command.",
+    "axem-sx-repos": {
+      "role": "Ships /etc/zypp/repos.d/axem-sx.repo (enabled) + packman.repo (disabled). Required by every pattern so the installed system can resolve axem-sx-* packages out of the box.",
+      "version": "1.0.1-1"
+    },
+    "axem-sx-codecs": {
+      "role": "Multimedia readiness — pulls gstreamer-{good,bad,ugly,libav}, ffmpeg-7, vlc. Ships /usr/bin/axem-sx-codecs-upgrade-to-packman for optional Packman vendor-swap.",
+      "version": "1.0.1-1"
+    },
+    "axem-sx-apps-common": {
+      "role": "Curated cross-edition app set: LibreOffice, VLC, Inkscape, kcalc, Spectacle, KolourPaint, Flatpak, git/curl/wget/tar/xz/gzip/unzip/7zip/micro-editor.",
+      "version": "1.0.1-2"
+    },
+    "axem-sx-thirdparty-helper": {
+      "role": "axem-sx-install-thirdparty whiptail menu — guided install of Spotify/Discord/VS Code (Flathub) + Anti-Gravity (OBS).",
+      "version": "1.0.1-1"
+    },
+    "axem-sx-pro-full": {
+      "role": "One-command Pro: patterns-axem-sx-pro + repos + codecs + apps-common + thirdparty-helper + discover6-backend-flatpak.",
+      "version": "1.0.1-2",
+      "command": "sudo zypper install axem-sx-pro-full"
+    },
+    "axem-sx-light-full": {
+      "role": "One-command Light: patterns-axem-sx-light + repos + codecs + apps-common + thirdparty-helper.",
+      "version": "1.0.1-1",
+      "command": "sudo zypper install axem-sx-light-full"
+    },
+    "axem-sx-gold-full": {
+      "role": "One-command Gold: patterns-axem-sx-gold + repos + codecs + apps-common + thirdparty-helper + flatpak-remote-flathub.",
+      "version": "1.0.1-1",
+      "command": "sudo zypper install axem-sx-gold-full"
+    }
+  }
+}
