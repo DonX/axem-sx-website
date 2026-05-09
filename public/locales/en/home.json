@@ -22,15 +22,15 @@
     "subheading": "Every tool in AXEM-SX is crafted with intention — from the first boot to your deepest workflow.",
     "controlHub": {
       "title": "Control Hub",
-      "description": "A unified command center for your system. Tune performance, manage hardware, and control every aspect of your environment from one place."
+      "description": "Your workstation, governed from your workstation. A native Qt6 daily-driver bridging KDE / LXQt / GNOME, with curated YaST and Cockpit alongside — all local, nothing in the cloud."
     },
-    "consoleAI": {
-      "title": "Console AI",
-      "description": "Your terminal, elevated. An AI-assisted shell that understands context, suggests commands, and helps you work smarter — not harder."
+    "desktopSnapshots": {
+      "title": "Desktop Snapshots",
+      "description": "Roam the Linux desktop spectrum without leaving home. Switch flavors — KDE, LXQt, GNOME — keep your packages, your identity, your data. A module of the Control Hub."
     },
     "softDepot": {
       "title": "Soft Depot",
-      "description": "A curated software hub built for AXEM-SX. Discover, install, and manage applications with elegance — no terminal required."
+      "description": "A curated software hub built for AXEM-SX. Discover, install, and manage applications with elegance — no telemetry, no noise, no terminal required."
     }
   },
   "dock": {

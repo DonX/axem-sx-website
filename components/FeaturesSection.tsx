@@ -24,9 +24,9 @@ export default function FeaturesSection() {
   const { t } = useTranslation('home');
 
   const features = [
-    { icon: '/axem-control-hub.png',   titleKey: 'features.controlHub.title', descKey: 'features.controlHub.description' },
-    { icon: '/axem-sx-console-ai.png', titleKey: 'features.consoleAI.title',   descKey: 'features.consoleAI.description' },
-    { icon: '/soft-depot.png',         titleKey: 'features.softDepot.title',   descKey: 'features.softDepot.description' },
+    { icon: '/axem-control-hub.png',   titleKey: 'features.controlHub.title',       descKey: 'features.controlHub.description' },
+    { icon: '/desktop-snapshots.svg',  titleKey: 'features.desktopSnapshots.title', descKey: 'features.desktopSnapshots.description' },
+    { icon: '/soft-depot.png',         titleKey: 'features.softDepot.title',        descKey: 'features.softDepot.description' },
   ];
 
   return (

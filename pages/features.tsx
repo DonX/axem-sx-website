@@ -43,25 +43,108 @@ export default function FeaturesPage() {
       </div>
 
       <div className="w-full px-6 py-24">
-        <div className="max-w-6xl mx-auto flex flex-col gap-20">
+        <div className="max-w-6xl mx-auto flex flex-col gap-24">
 
-          {/* Boh-IO */}
-          <section id="boh-io" className="flex flex-col items-center gap-10 text-center">
-            <div className="flex flex-col items-center gap-4">
-              <div className="flex flex-col items-center gap-4">
-                <div className="relative w-20 h-20 shrink-0">
-                  <Image src="/axem-sx-console-ai.png" alt="Boh-IO" fill className="object-contain" />
+          {/* §1 — Control Hub */}
+          <section id="control-hub" className="flex flex-col items-center gap-10">
+            <div className="flex flex-col items-center gap-4 text-center max-w-3xl">
+              <span className="text-xs font-mono text-amber-400/60 uppercase tracking-widest">{t('hubEyebrow')}</span>
+              <div className="flex items-center gap-3 flex-wrap justify-center">
+                <div className="relative w-14 h-14 shrink-0">
+                  <Image src="/axem-control-hub.png" alt="Control Hub" fill className="object-contain" />
                 </div>
-                <div>
-                  <h2 className="text-3xl md:text-5xl font-black text-white">Boh-IO</h2>
-                  <p className="text-amber-300/70 text-sm tracking-wider uppercase">{t('bohioSubtitle')}</p>
-                </div>
+                <span className="px-2 py-0.5 rounded-full border border-amber-400/25 text-[10px] font-mono text-amber-300/70 uppercase tracking-widest">{t('hubBadge')}</span>
               </div>
-              <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">{t('bohioDesc')}</p>
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">{t('hubHeadline')}</h2>
+              <p className="text-amber-300/70 text-base">{t('hubSub')}</p>
+              <p className="text-white/60 leading-relaxed mt-2">{t('hubLead')}</p>
             </div>
 
-            {/* Two pane diagram */}
-            <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden border border-amber-400/15 text-xs font-mono">
+            {/* Three tiers */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
+              {(['1', '2', '3'] as const).map(n => (
+                <div key={n} className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-amber-400/15 text-left">
+                  <span className="text-[10px] font-mono text-amber-400/60 uppercase tracking-widest">{t(`hubTier${n}Label`)}</span>
+                  <h3 className="text-lg font-bold text-amber-300">{t(`hubTier${n}Name`)}</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">{t(`hubTier${n}Desc`)}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Breadth strip */}
+            <div className="w-full max-w-5xl flex flex-col gap-3 p-5 rounded-xl border border-amber-400/10 bg-black/30 text-left">
+              <span className="text-[10px] font-mono text-amber-400/60 uppercase tracking-widest">{t('hubBreadthLabel')}</span>
+              <p className="text-sm text-white/70 leading-relaxed font-mono">{t('hubBreadthList')}</p>
+            </div>
+
+            {/* Screenshot */}
+            <div className="w-full max-w-4xl flex flex-col items-center gap-2">
+              <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-amber-400/15">
+                <Image src="/AXEM-ScreenSHOTS/App-axem-control-hub_shot1.png" alt="AXEM-SX Control Hub" fill className="object-cover" sizes="(min-width: 1024px) 64rem, 100vw" />
+              </div>
+              <p className="text-xs text-white/40 italic text-center">{t('hubScreenshotCaption')}</p>
+            </div>
+
+            {/* Footnote */}
+            <p className="text-xs text-white/40 italic max-w-2xl text-center leading-relaxed">{t('hubFootnote')}</p>
+          </section>
+
+          {/* §2 — Desktop Snapshot Manager */}
+          <section id="desktop-snapshots" className="flex flex-col items-center gap-10">
+            <div className="flex flex-col items-center gap-4 text-center max-w-3xl">
+              <span className="text-xs font-mono text-amber-400/60 uppercase tracking-widest">{t('snapEyebrow')}</span>
+              <div className="flex items-center gap-3 flex-wrap justify-center">
+                <div className="relative w-14 h-14 shrink-0">
+                  <Image src="/desktop-snapshots.svg" alt="Desktop Snapshots" fill className="object-contain" />
+                </div>
+                <span className="px-2 py-0.5 rounded-full border border-amber-400/25 text-[10px] font-mono text-amber-300/70 uppercase tracking-widest">{t('snapBadge')}</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">{t('snapHeadline')}</h2>
+              <p className="text-amber-300/70 text-base">{t('snapSub')}</p>
+              <p className="text-white/60 leading-relaxed mt-2">{t('snapLead')}</p>
+            </div>
+
+            {/* Detected flavors */}
+            <div className="w-full max-w-5xl flex flex-col gap-3">
+              <span className="text-[10px] font-mono text-amber-400/60 uppercase tracking-widest text-center">{t('snapDetectedTitle')}</span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {(['1', '2', '3'] as const).map(n => (
+                  <div key={n} className="flex flex-col gap-1 p-5 rounded-xl bg-white/5 border border-amber-400/15 text-left">
+                    <h3 className="text-base font-bold text-amber-300">{t(`snap${n}Label`)}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">{t(`snap${n}Desc`)}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-xs text-white/50 italic max-w-2xl text-center leading-relaxed font-mono">{t('snapSessionNote')}</p>
+            <p className="text-xs text-amber-300/60 italic max-w-2xl text-center leading-relaxed">{t('snapHonest')}</p>
+          </section>
+
+          {/* §3 — Soft Depot */}
+          <section id="soft-depot" className="flex flex-col items-center gap-6 text-center max-w-3xl mx-auto">
+            <span className="text-xs font-mono text-amber-400/60 uppercase tracking-widest">{t('depotEyebrow')}</span>
+            <div className="relative w-14 h-14 shrink-0">
+              <Image src="/soft-depot.png" alt="Soft Depot" fill className="object-contain" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">{t('depotHeadline')}</h2>
+            <p className="text-white/60 leading-relaxed">{t('depotDesc')}</p>
+          </section>
+
+          {/* §4 — Boh-IO (compressed) */}
+          <section id="boh-io" className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-3 text-center max-w-3xl">
+              <span className="text-xs font-mono text-amber-400/60 uppercase tracking-widest">{t('bohioEyebrow')}</span>
+              <div className="relative w-14 h-14 shrink-0">
+                <Image src="/axem-sx-console-ai.png" alt="Boh-IO" fill className="object-contain" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">{t('bohioHeadline')}</h2>
+              <p className="text-amber-300/70 text-xs tracking-wider uppercase">{t('bohioSubtitle')}</p>
+              <p className="text-white/60 leading-relaxed mt-1">{t('bohioDesc')}</p>
+            </div>
+
+            {/* Two-pane diagram (preserved) */}
+            <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden border border-amber-400/15 text-xs font-mono w-full max-w-3xl">
               <div className="bg-[#0d0d0d] p-5 flex flex-col gap-3">
                 <div className="text-amber-400/60 uppercase tracking-widest text-[10px]">{t('bohioTerminalPane')}</div>
                 <div className="text-green-400/80">$ ls -la</div>
@@ -81,43 +164,8 @@ export default function FeaturesPage() {
               </div>
             </div>
 
-            {/* AXEM Console Setup Guide */}
-            <div className="w-full max-w-2xl mx-auto flex flex-col gap-4 text-left">
-              <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-bold text-white">{t('axemConsoleTitle')}</h3>
-                <p className="text-sm text-amber-300/60 leading-relaxed">{t('axemConsoleNote')}</p>
-              </div>
-
-              {/* Steps */}
-              {([
-                { headingKey: 'axemConsoleStep1Heading', cmdKey: 'axemConsoleStep1Cmd', note: null },
-                { headingKey: 'axemConsoleStep2Heading', cmdKey: 'axemConsoleStep2Cmd', note: null },
-                { headingKey: 'axemConsoleStep3Heading', cmdKey: 'axemConsoleStep3Cmd', note: 'axemConsoleStep3Note' },
-                { headingKey: 'axemConsoleStep4Heading', cmdKey: 'axemConsoleStep4Cmd', note: null },
-              ] as const).map((step) => (
-                <div key={step.cmdKey} className="flex flex-col gap-1 p-4 bg-white/5 border border-amber-400/10 hover:border-amber-400/25 transition-colors">
-                  <span className="text-xs text-white/40 uppercase tracking-widest">{t(step.headingKey)}</span>
-                  <code className="text-amber-300 font-mono text-sm">{t(step.cmdKey)}</code>
-                  {step.note && (
-                    <span className="text-[11px] text-white/30 italic">{t(step.note)}</span>
-                  )}
-                </div>
-              ))}
-
-              {/* Notes */}
-              <div className="flex flex-col gap-2 p-4 border border-white/10 bg-white/3">
-                <span className="text-xs text-amber-400/60 uppercase tracking-widest font-semibold">{t('axemConsoleNotesTitle')}</span>
-                {(['axemConsoleNote1', 'axemConsoleNote2', 'axemConsoleNote3'] as const).map((key) => (
-                  <p key={key} className="text-xs text-white/50 leading-relaxed flex items-start gap-2">
-                    <span className="text-amber-400/50 mt-0.5">·</span>
-                    {t(key)}
-                  </p>
-                ))}
-              </div>
-            </div>
-
-            {/* Privacy */}
-            <div className="p-6 rounded-2xl border border-amber-400/20 flex flex-col gap-3"
+            {/* Privacy panel (preserved) */}
+            <div className="w-full max-w-3xl p-6 rounded-2xl border border-amber-400/20 flex flex-col gap-3"
               style={{ background: 'linear-gradient(135deg, rgba(174,142,88,0.05) 0%, transparent 100%)' }}>
               <h3 className="text-base font-bold text-amber-300 uppercase tracking-wider">{t('privacyTitle')}</h3>
               <ul className="flex flex-col gap-2">
@@ -130,35 +178,13 @@ export default function FeaturesPage() {
               </ul>
             </div>
 
-            {/* Constraints */}
-            <div className="p-5 rounded-xl bg-white/3 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-amber-400/70 text-xs font-bold uppercase tracking-widest mb-3">{t('constraintsTitle')}</p>
-              <p className="text-sm text-white/50 leading-relaxed">{t('constraintsDesc')}</p>
-            </div>
+            {/* Constraints + docs pointer */}
+            <p className="text-xs text-white/50 italic max-w-2xl text-center leading-relaxed">{t('bohioConstraints')}</p>
+            <p className="text-xs text-amber-300/60 italic max-w-2xl text-center leading-relaxed">{t('bohioMoreInDocs')}</p>
           </section>
 
-          {/* Workshop Tools */}
-          <section className="flex flex-col items-center gap-10 text-center">
-            <h2 className="text-3xl font-black text-white">{t('toolsTitle')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {([
-                { icon: '/axem-control-hub.png', titleKey: 'tool1Title', descKey: 'tool1Desc' },
-                { icon: '/axem-sx-console-ai.png', titleKey: 'tool2Title', descKey: 'tool2Desc' },
-                { icon: '/soft-depot.png', titleKey: 'tool3Title', descKey: 'tool3Desc' },
-              ]).map((item) => (
-                <div key={item.titleKey} className="group flex flex-col items-center gap-4 p-6 rounded-2xl bg-white/5 border border-amber-400/10 hover:border-amber-400/30 transition-all">
-                  <div className="relative w-14 h-14">
-                    <Image src={item.icon} alt={t(item.titleKey)} fill className="object-contain group-hover:scale-110 transition-transform duration-300" />
-                  </div>
-                  <h3 className="text-lg font-bold text-amber-300">{t(item.titleKey)}</h3>
-                  <p className="text-sm text-white/55 leading-relaxed">{t(item.descKey)}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Technical Specs */}
-          <section className="flex flex-col items-center gap-8 text-center">
+          {/* §5 — Technical Architecture */}
+          <section id="architecture" className="flex flex-col items-center gap-8 text-center">
             <div className="flex flex-col items-center">
               <div className="flex flex-col items-center gap-3 mb-2">
                 <div className="w-8 h-8 mb-4" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, #c9a65f, #ae8e58)' }} />
@@ -171,12 +197,13 @@ export default function FeaturesPage() {
                 <span className="text-xs text-amber-400/60 uppercase tracking-widest font-semibold">{t('archTableHeader')}</span>
               </div>
               <div className="px-6 divide-y divide-white/5">
-                <SpecRow label={t('specBaseSystem')} value="openSUSE Leap 16.0 (Pre-Release)" />
+                <SpecRow label={t('specBaseSystem')} value="openSUSE Leap 16.0" />
                 <SpecRow label={t('specArch')} value="x86-64-v2 only — approximately post-2009 CPUs" />
                 <SpecRow label={t('specDisplay')} value="Wayland only — Xorg removed from installer" />
                 <SpecRow label={t('specLegacy')} value="XWayland (transparent compatibility)" />
                 <SpecRow label={t('specDesktop')} value="KDE Plasma (Wayland session)" />
-                <SpecRow label={t('specAdmin')} value="AXEM-SX Control Hub — curated YaST + Cockpit (localhost:9090)" />
+                <SpecRow label={t('specDesktopFlavors')} value="KDE / LXQt / GNOME — switchable via Control Hub" />
+                <SpecRow label={t('specAdmin')} value="Control Hub (Qt6) · YaST · Cockpit (localhost:9090) — all local" />
                 <SpecRow label={t('specAudio')} value="PipeWire — replaces PulseAudio entirely" />
                 <SpecRow label={t('specNetwork')} value="NetworkManager only — wicked tool suite removed" />
                 <SpecRow label={t('specSecurity')} value="SELinux enforcing, root SSH password login disabled" />

@@ -22,15 +22,15 @@
     "subheading": "Chaque outil d'AXEM-SX est façonné avec intention — du premier démarrage jusqu'aux flux de travail les plus exigeants.",
     "controlHub": {
       "title": "Centre de contrôle",
-      "description": "Un poste de commande unifié pour votre système. Optimisez les performances, gérez le matériel et maîtrisez chaque aspect de votre environnement en un seul endroit."
+      "description": "Votre poste, gouverné depuis votre poste. Une application Qt6 native qui réunit KDE / LXQt / GNOME, avec YaST curé et Cockpit aux côtés — tout local, rien dans le nuage."
     },
-    "consoleAI": {
-      "title": "Console IA",
-      "description": "Boh-IO — Un agent civique enraciné, au service de l’humain et de ses interactions. (Activation post-installation requise)."
+    "desktopSnapshots": {
+      "title": "Instantanés de bureau",
+      "description": "Parcourez le spectre des bureaux Linux sans quitter la maison. Changez de saveur — KDE, LXQt, GNOME — gardez vos paquets, votre identité, vos données. Un module du Centre de contrôle."
     },
     "softDepot": {
       "title": "Dépôt Logiciel",
-      "description": "Un hub logiciel curé pour AXEM-SX. Découvrez, installez et gérez vos applications avec élégance — sans terminal requis."
+      "description": "Un hub logiciel curé pour AXEM-SX. Découvrez, installez et gérez vos applications avec élégance — sans télémétrie, sans bruit, sans terminal requis."
     }
   },
   "dock": {
