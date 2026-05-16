@@ -114,6 +114,6 @@ just installed it and is wondering what's on screen.
 
 ---
 
-*AXEM-SX is a project of [Golda-Global Inc.](https://axem-sx.com),
+*AXEM-SX is a project of [Golda-Global Inc.](https://golda.global),
 a civic-software company. This documentation is licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

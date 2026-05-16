@@ -9,7 +9,7 @@ description: >-
 
 AXEM-SX is a **sovereignty-focused Linux distribution** based on
 [openSUSE Leap 16.0](https://get.opensuse.org/leap/). It is built and
-maintained by [Golda-Global Inc.](https://axem-sx.com), a civic-software
+maintained by [Golda-Global Inc.](https://golda.global), a civic-software
 company.
 
 **Read time:** ~5 minutes.
