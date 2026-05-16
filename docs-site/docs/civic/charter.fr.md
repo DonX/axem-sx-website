@@ -83,7 +83,7 @@ le silence est aussi un service que nous vous rendons.
 
 ### 5. Une infrastructure indépendante.
 
-Notre code vit sur [GitHub](https://github.com/AXEM-SX-Distro), nos
+Notre code vit sur [GitHub](https://github.com/DonX/axem-sx-website), nos
 paquets sur l'[openSUSE Build Service](https://build.opensuse.org/),
 notre site web sur une infrastructure que nous contrôlons. Nous ne
 sommes pas exposés à la politique d'une seule plateforme. Si l'une

@@ -79,7 +79,7 @@ better. When it doesn't, the silence is also a service to you.
 ### 5. Independent infrastructure.
 
 Our code lives on
-[GitHub](https://github.com/AXEM-SX-Distro), our packages on the
+[GitHub](https://github.com/DonX/axem-sx-website), our packages on the
 [openSUSE Build Service](https://build.opensuse.org/), our website
 on infrastructure we control. We are not exposed to the policy of any
 single platform. If any of these go away, we have a path off them.
