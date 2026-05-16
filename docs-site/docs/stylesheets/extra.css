@@ -1,0 +1,315 @@
+/* ============================================================
+   AXEM-SX Documentation — Wood & Gold theme
+   --------------------------------------------------------
+   Two modes, one identity.
+
+   Dark   "Wood at night"   — the marketing-site mood,
+                              calmed for long-form reading.
+   Light  "Paper at desk"   — warm cream, dark ink, vivid
+                              saffron accents that stand
+                              out without shouting.
+
+   The metal in dark mode is gold (#c9a65f).
+   In light mode the same metal heats to saffron (#b45309)
+   so it stays legible on cream.
+   ============================================================ */
+
+/* --- Brand tokens (used by both schemes) -------------------- */
+:root {
+  /* Dark-mode metal */
+  --axem-gold:       #c9a65f;
+  --axem-gold-light: #f0c97a;
+
+  /* Light-mode heat */
+  --axem-saffron:       #b45309;  /* primary, AA on cream */
+  --axem-saffron-light: #d97706;  /* hover / secondary */
+  --axem-saffron-glow:  #f59e0b;  /* selection / focus */
+
+  /* Neutrals */
+  --axem-ink:         #1c1917;   /* warm near-black */
+  --axem-ink-pure:    #0a0a0a;   /* marketing black */
+  --axem-paper:       #faf7f0;   /* cream */
+  --axem-paper-deep:  #f3ede0;   /* surfaces on cream */
+  --axem-cream-lift:  #ede5d2;
+  --axem-night:       #111110;   /* off-pure-black */
+  --axem-night-lift:  #1a1916;
+  --axem-night-card:  #1c1b18;
+  --axem-stone:       #57534e;
+  --axem-stone-light: #a8a29e;
+  --axem-bone:        #e8e6e1;   /* warm off-white text */
+}
+
+/* ============================================================
+   LIGHT SCHEME — "Paper at desk"
+   Warm cream background, dark ink, vivid saffron accents.
+   ============================================================ */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:           var(--axem-paper);
+  --md-default-bg-color--light:    var(--axem-paper-deep);
+  --md-default-bg-color--lighter:  var(--axem-cream-lift);
+  --md-default-fg-color:           var(--axem-ink);
+  --md-default-fg-color--light:    var(--axem-stone);
+  --md-default-fg-color--lighter:  var(--axem-stone-light);
+  --md-default-fg-color--lightest: #d6d3d1;
+
+  --md-primary-fg-color:        var(--axem-ink);
+  --md-primary-fg-color--light: #2c2825;
+  --md-primary-fg-color--dark:  var(--axem-ink-pure);
+  --md-primary-bg-color:        var(--axem-paper);
+
+  --md-accent-fg-color:              var(--axem-saffron);
+  --md-accent-fg-color--transparent: rgba(180, 83, 9, 0.10);
+  --md-accent-bg-color:              var(--axem-paper);
+
+  --md-typeset-a-color:    var(--axem-saffron);
+  --md-typeset-mark-color: rgba(245, 158, 11, 0.35);
+
+  --md-code-bg-color: var(--axem-paper-deep);
+  --md-code-fg-color: var(--axem-ink);
+}
+
+[data-md-color-scheme="default"] ::selection {
+  background-color: rgba(245, 158, 11, 0.30);
+}
+
+/* ============================================================
+   DARK SCHEME — "Wood at night"
+   Off-pure-black background, warm bone text, gold accents.
+   ============================================================ */
+[data-md-color-scheme="slate"] {
+  --md-hue: 30;
+  --md-default-bg-color:           var(--axem-night);
+  --md-default-bg-color--light:    var(--axem-night-lift);
+  --md-default-bg-color--lighter:  var(--axem-night-card);
+  --md-default-fg-color:           var(--axem-bone);
+  --md-default-fg-color--light:    #d6d3d1;
+  --md-default-fg-color--lighter:  var(--axem-stone-light);
+  --md-default-fg-color--lightest: var(--axem-stone);
+
+  --md-primary-fg-color:        var(--axem-night);
+  --md-primary-fg-color--light: var(--axem-night-lift);
+  --md-primary-fg-color--dark:  var(--axem-ink-pure);
+  --md-primary-bg-color:        var(--axem-bone);
+
+  --md-accent-fg-color:              var(--axem-gold);
+  --md-accent-fg-color--transparent: rgba(201, 166, 95, 0.12);
+
+  --md-typeset-a-color:    #d9b870;
+  --md-typeset-mark-color: rgba(240, 201, 122, 0.25);
+
+  --md-code-bg-color: var(--axem-night-lift);
+  --md-code-fg-color: #e7e5e4;
+}
+
+[data-md-color-scheme="slate"] ::selection {
+  background-color: rgba(201, 166, 95, 0.30);
+}
+
+/* ============================================================
+   TYPOGRAPHY — reading scale, not UI scale
+   ============================================================ */
+
+/* Body — bumped from Material's 0.8rem to 0.9rem (~14.4px)
+   for long-form readability without breaking the chrome's
+   visual scale. */
+.md-typeset {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Headings */
+.md-typeset h1 {
+  font-size: 2.0rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  padding-bottom: 0.3em;
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+}
+[data-md-color-scheme="default"] .md-typeset h2 {
+  border-bottom: 1px solid rgba(180, 83, 9, 0.28);
+}
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom: 1px solid rgba(201, 166, 95, 0.22);
+}
+
+.md-typeset h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2em;
+}
+[data-md-color-scheme="default"] .md-typeset h3 {
+  color: var(--axem-saffron);
+}
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: var(--axem-gold);
+}
+
+.md-typeset h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Tables — slightly more compact than body */
+.md-typeset table:not([class]) {
+  font-size: 0.85rem;
+}
+
+/* Sidebar nav — UI scale, stays compact */
+.md-nav {
+  font-size: 0.72rem;
+}
+
+/* ============================================================
+   LINKS — dotted by default, solid on hover
+   ============================================================ */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: var(--axem-saffron-light);
+  border-bottom: 1px solid var(--axem-saffron-light);
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--axem-gold-light);
+  border-bottom: 1px solid var(--axem-gold-light);
+}
+
+/* ============================================================
+   CODE — inline (warm tinted bg) and blocks (left accent rule)
+   ============================================================ */
+.md-typeset code {
+  font-size: 0.88em;
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
+}
+[data-md-color-scheme="default"] .md-typeset code {
+  background-color: var(--axem-cream-lift);
+}
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: #26221b;
+}
+
+.md-typeset pre > code {
+  line-height: 1.55;
+}
+
+.md-typeset pre > code,
+.md-typeset .highlight {
+  border-left: 2px solid;
+}
+[data-md-color-scheme="default"] .md-typeset pre > code,
+[data-md-color-scheme="default"] .md-typeset .highlight {
+  border-left-color: var(--axem-saffron);
+}
+[data-md-color-scheme="slate"] .md-typeset pre > code,
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  border-left-color: var(--axem-gold);
+}
+
+/* ============================================================
+   ADMONITIONS — readable size, accent-tinted note/tip
+   ============================================================ */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-width: 3px;
+  font-size: 0.85rem;
+  border-radius: 2px;
+}
+
+[data-md-color-scheme="default"] .md-typeset .admonition.note,
+[data-md-color-scheme="default"] .md-typeset details.note {
+  border-color: var(--axem-saffron);
+}
+[data-md-color-scheme="default"] .md-typeset .note > .admonition-title,
+[data-md-color-scheme="default"] .md-typeset .note > summary {
+  background-color: rgba(180, 83, 9, 0.10);
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition.note,
+[data-md-color-scheme="slate"] .md-typeset details.note {
+  border-color: var(--axem-gold);
+}
+[data-md-color-scheme="slate"] .md-typeset .note > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .note > summary {
+  background-color: rgba(201, 166, 95, 0.10);
+}
+
+[data-md-color-scheme="default"] .md-typeset .admonition.tip,
+[data-md-color-scheme="default"] .md-typeset details.tip {
+  border-color: var(--axem-saffron-light);
+}
+[data-md-color-scheme="default"] .md-typeset .tip > .admonition-title,
+[data-md-color-scheme="default"] .md-typeset .tip > summary {
+  background-color: rgba(217, 119, 6, 0.10);
+}
+
+/* ============================================================
+   CHROME — header, tabs, sidebar, footer, search, edit pencil
+   ============================================================ */
+.md-header { box-shadow: none; }
+[data-md-color-scheme="default"] .md-header {
+  border-bottom: 1px solid rgba(180, 83, 9, 0.20);
+}
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom: 1px solid rgba(201, 166, 95, 0.18);
+}
+
+[data-md-color-scheme="default"] .md-tabs {
+  border-bottom: 1px solid rgba(180, 83, 9, 0.10);
+}
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid rgba(201, 166, 95, 0.10);
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active { opacity: 1; }
+[data-md-color-scheme="default"] .md-tabs__link:hover,
+[data-md-color-scheme="default"] .md-tabs__link--active {
+  color: var(--axem-saffron-light);
+}
+[data-md-color-scheme="slate"] .md-tabs__link:hover,
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: var(--axem-gold-light);
+}
+
+[data-md-color-scheme="default"] .md-nav__link:hover,
+[data-md-color-scheme="default"] .md-nav__link--active {
+  color: var(--axem-saffron);
+}
+[data-md-color-scheme="slate"] .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: var(--axem-gold);
+}
+
+/* Footer — quiet, civic, dark in both modes */
+.md-footer-meta { background-color: var(--axem-ink-pure); }
+.md-footer__inner { padding: 1.5rem 0; }
+
+/* Search focus ring */
+[data-md-color-scheme="default"] [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  box-shadow: 0 0 0 1px var(--axem-saffron);
+}
+[data-md-color-scheme="slate"] [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  box-shadow: 0 0 0 1px var(--axem-gold);
+}
+
+/* "Edit this page" pencil — discreet */
+.md-content__button { color: var(--md-default-fg-color--lightest); }
+[data-md-color-scheme="default"] .md-content__button:hover {
+  color: var(--axem-saffron);
+}
+[data-md-color-scheme="slate"] .md-content__button:hover {
+  color: var(--axem-gold);
+}

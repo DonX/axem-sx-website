@@ -1,0 +1,235 @@
+site_name: AXEM-SX Documentation
+site_url: https://docs.axem-sx.org/
+site_description: >-
+  Documentation for AXEM-SX — a sovereignty-focused Linux distribution based on openSUSE Leap. Local administration, deliberate design, no telemetry.
+site_author: Golda-Global Inc.
+copyright: >-
+  Copyright &copy; 2025 Golda-Global Inc. — AXEM-SX is a sovereignty-focused Linux distribution.
+
+repo_url: https://github.com/DonX/axem-sx-website
+repo_name: DonX/axem-sx-website
+edit_uri: edit/main/docs-site/docs/
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Alan Sans
+    code: IBM Plex Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  palette:
+  - media: "(prefers-color-scheme)"
+    scheme: slate
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+  features:
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.sections
+  - navigation.expand
+  - navigation.path
+  - navigation.top
+  - navigation.footer
+  - toc.follow
+  - search.suggest
+  - search.highlight
+  - search.share
+  - content.code.copy
+  - content.code.annotate
+  - content.action.edit
+  - content.tabs.link
+
+extra_css:
+- stylesheets/extra.css
+
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/AXEM-SX-Distro
+    name: AXEM-SX on GitHub
+  - icon: fontawesome/solid/globe
+    link: https://axem-sx.com
+    name: AXEM-SX website
+  alternate:
+  - name: English
+    link: /en/
+    lang: en
+  - name: Français
+    link: /fr/
+    lang: fr
+
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- def_list
+- footnotes
+- md_in_html
+- tables
+- toc:
+    permalink: true
+    permalink_title: Anchor link to this section
+- pymdownx.betterem
+- pymdownx.caret
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.snippets
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format ""
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+
+plugins:
+- search:
+    lang:
+    - en
+    - fr
+- i18n:
+    docs_structure: suffix
+    languages:
+    - locale: en
+      default: true
+      name: English
+      build: true
+    - locale: fr
+      name: Français
+      build: true
+      nav_translations:
+        Getting Started: Premiers pas
+        Coming From...: Vous arrivez de...
+        Coming from Ubuntu or Debian: Vous arrivez d'Ubuntu ou Debian
+        Coming from Fedora or RHEL: Vous arrivez de Fedora ou RHEL
+        Coming from Arch: Vous arrivez d'Arch
+        Coming from macOS: Vous arrivez de macOS
+        Coming from Windows: Vous arrivez de Windows
+        Installation: Installation
+        Editions: Éditions
+        Daily Use: Au quotidien
+        The AXEM-SX Dock: Le dock AXEM-SX
+        Panels & Layouts: Panneaux et dispositions
+        The Control Hub: Le Control Hub
+        The Soft Depot: Le Soft Depot
+        The Desktop Snapshot Manager: Le gestionnaire d'instantanés du bureau
+        Widgets & Applets: Widgets et applets
+        Make it Yours: À votre image
+        Switching Desktop Environments: Changer d'environnement de bureau
+        Make AXEM look like Ubuntu: Donner à AXEM l'allure d'Ubuntu
+        Make AXEM look like macOS: Donner à AXEM l'allure de macOS
+        Make AXEM look like Windows: Donner à AXEM l'allure de Windows
+        Make AXEM look like vanilla openSUSE: Donner à AXEM l'allure d'openSUSE
+        Replacing the Dock: Remplacer le dock
+        Icon Themes, Cursors & Fonts: Thèmes d'icônes, curseurs et polices
+        Drivers & Hardware: Pilotes et matériel
+        Software & Updates: Logiciels et mises à jour
+        The Zypper Universe: L'univers Zypper
+        Daily Commands: Commandes du quotidien
+        Third-Party Repositories: Dépôts tiers
+        Flatpak on AXEM: Flatpak sur AXEM
+        Codecs & Multimedia: Codecs et multimédia
+        When to Use What: Quand utiliser quoi
+        Snapshots & Recovery: Instantanés et récupération
+        Troubleshooting: Dépannage
+        Civic & Philosophy: Civique et philosophie
+        Hardware Lab: Laboratoire matériel
+        Developer Docs: Documentation développeur
+        Reference: Référence
+
+nav:
+- Home: index.md
+- Getting Started:
+  - getting-started/index.md
+  - Welcome to AXEM-SX: getting-started/welcome.md
+  - The Try Guide: getting-started/try-guide.md
+  - Your First Hour: getting-started/first-hour.md
+  - The One-Command Full Experience: getting-started/one-command.md
+  - Coming From...:
+    - getting-started/coming-from/index.md
+    - Coming from Ubuntu or Debian: getting-started/coming-from/ubuntu-debian.md
+    - Coming from Fedora or RHEL: getting-started/coming-from/fedora-rhel.md
+    - Coming from Arch: getting-started/coming-from/arch.md
+    - Coming from macOS: getting-started/coming-from/macos.md
+    - Coming from Windows: getting-started/coming-from/windows.md
+- Installation:
+  - installation/index.md
+- Editions:
+  - editions/index.md
+- Daily Use:
+  - daily-use/index.md
+  - The AXEM-SX Dock: daily-use/axem-sx-dock.md
+  - Panels & Layouts: daily-use/panels-and-layouts.md
+  - The Control Hub: daily-use/control-hub.md
+  - The Soft Depot: daily-use/soft-depot.md
+  - The Desktop Snapshot Manager: daily-use/desktop-snapshot-manager.md
+  - Widgets & Applets: daily-use/widgets-and-applets.md
+- Make it Yours:
+  - make-it-yours/index.md
+  - Switching Desktop Environments: make-it-yours/desktop-switching.md
+  - Make AXEM look like Ubuntu: make-it-yours/look-like-ubuntu.md
+  - Make AXEM look like macOS: make-it-yours/look-like-macos.md
+  - Make AXEM look like Windows: make-it-yours/look-like-windows.md
+  - Make AXEM look like vanilla openSUSE: make-it-yours/look-like-opensuse.md
+  - Replacing the Dock: make-it-yours/replacing-the-dock.md
+  - Icon Themes, Cursors & Fonts: make-it-yours/themes-and-fonts.md
+- Drivers & Hardware:
+  - drivers/index.md
+  - NVIDIA Setup: drivers/nvidia.md
+- Software & Updates:
+  - software/index.md
+  - The Zypper Universe: software/zypper-universe.md
+  - Daily Commands: software/daily-commands.md
+  - Third-Party Repositories: software/third-party-repos.md
+  - Flatpak on AXEM: software/flatpak.md
+  - Codecs & Multimedia: software/codecs.md
+  - When to Use What: software/when-to-use-what.md
+- Snapshots & Recovery:
+  - snapshots/index.md
+  - Recovering from a Bad Update: snapshots/bad-update.md
+- Troubleshooting:
+  - troubleshooting/index.md
+- Civic & Philosophy:
+  - civic/index.md
+  - The Civic Charter: civic/charter.md
+- Hardware Lab:
+  - hardware-lab/index.md
+- Developer Docs:
+  - developer/index.md
+- Reference:
+  - reference/index.md
