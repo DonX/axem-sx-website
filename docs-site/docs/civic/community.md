@@ -65,12 +65,19 @@ Days, not hours. This is a workshop, not a help desk.
 
 ## Supporting the project
 
-If you would rather contribute money than time, you can:
+If you would rather contribute money than time, you can. The
+**minimum contribution is $10 USD** — small enough to be casual,
+large enough to be meaningful.
 
 [Donate with PayPal](https://www.paypal.com/ncp/payment/C9K22K9F2G7BQ){ .md-button .md-button--primary }
 
-Contributions are processed through the PayPal hosted donate
-button and go directly to the project's maintenance — server
+Or scan from your phone:
+
+<p align="center">
+  <img src="../assets/qrcode.png" alt="PayPal donation QR code for AXEM-SX" width="220" />
+</p>
+
+Contributions go directly to the project's maintenance — server
 costs, build infrastructure, and occasional hardware for testing.
 
 No tier, no perk, no newsletter. Just patient releases, quiet

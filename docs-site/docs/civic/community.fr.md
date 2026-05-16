@@ -71,14 +71,20 @@ d'assistance.
 ## Soutenir le projet
 
 Si vous préférez contribuer en argent plutôt qu'en temps, vous
-pouvez :
+le pouvez. La **contribution minimum est de 10 $ USD** — assez
+petite pour rester occasionnelle, assez grande pour être utile.
 
 [Faire un don via PayPal](https://www.paypal.com/ncp/payment/C9K22K9F2G7BQ){ .md-button .md-button--primary }
 
-Les contributions sont traitées via le bouton de don hébergé
-PayPal et vont directement à la maintenance du projet — coûts
-de serveur, infrastructure de build, et occasionnellement du
-matériel pour les tests.
+Ou scannez depuis votre téléphone :
+
+<p align="center">
+  <img src="../assets/qrcode.png" alt="QR code de don PayPal pour AXEM-SX" width="220" />
+</p>
+
+Les contributions vont directement à la maintenance du projet —
+coûts de serveur, infrastructure de build, et occasionnellement
+du matériel pour les tests.
 
 Pas de palier, pas d'avantage, pas de newsletter. Juste des
 sorties patientes, une maintenance discrète, et un
