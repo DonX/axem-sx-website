@@ -56,6 +56,20 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <a
+              href="https://docs.axem-sx.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors duration-200"
+              aria-label={`${t('nav.docs')} (docs.axem-sx.org)`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.6" stroke="currentColor" className="w-4 h-4" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+              </svg>
+              {t('nav.docs')}
+            </a>
+          </li>
         </ul>
 
         {/* Col 3 — Lang switcher + Download */}
@@ -117,6 +131,20 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+          <a
+            href="https://docs.axem-sx.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[#f5f0e8] font-semibold tracking-wider hover:text-amber-400 transition-colors"
+            style={{ fontFamily: 'var(--font-allan), serif' }}
+            onClick={() => setMenuOpen(false)}
+            aria-label={`${t('nav.docs')} (docs.axem-sx.org)`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.6" stroke="currentColor" className="w-4 h-4" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+            </svg>
+            {t('nav.docs')}
+          </a>
           <button
             type="button"
             onClick={() => { toggleLocale(); setMenuOpen(false); }}
