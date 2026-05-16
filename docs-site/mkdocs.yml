@@ -227,6 +227,7 @@ nav:
 - Civic & Philosophy:
   - civic/index.md
   - The Civic Charter: civic/charter.md
+  - Community: civic/community.md
 - Hardware Lab:
   - hardware-lab/index.md
 - Developer Docs:
