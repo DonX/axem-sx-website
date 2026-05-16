@@ -2,7 +2,7 @@
 title: The Civic Charter
 description: >-
   The short version of the philosophy behind AXEM-SX — what we
-  promise, what we refuse, and why we built it.
+  promise, what we stand for, and why we built it.
 ---
 
 # The Civic Charter
@@ -86,30 +86,33 @@ single platform. If any of these go away, we have a path off them.
 
 ---
 
-## Three refusals
+## Three stands
 
-### We refuse "engagement" as a metric.
+### We stand for calm computing.
 
-AXEM-SX has no notification center for itself. The desktop will not
-nudge you to rate it, share it, or "complete your profile." The most
-respectful thing software can do is stay out of your way until you
-ask for it.
+Software at its best is quiet. AXEM-SX has no notification center
+for itself. The desktop will not nudge you to rate it, share it, or
+"complete your profile." Your attention belongs to your work — and
+the most respectful thing software can do is stay out of the way
+until you ask for it.
 
-### We refuse "the cloud" as a default.
+### We stand for local agency.
 
-Cloud services are useful. Cloud services as the *default storage,
-default sync, default backup, default authentication* layer of a
-personal computer — that is a position taken on your behalf without
-your consent. AXEM-SX takes the opposite position by default, and
-makes the cloud-flavored alternatives easy to add when you choose
-them.
+Your machine is the seat of authority for your own work. Storage,
+sync, backup, and authentication run locally by default — because
+those are decisions about your data, and they belong to you. Cloud
+services remain genuinely useful, and AXEM-SX makes the cloud-flavored
+alternatives easy to add when you choose them. The default simply
+sits where your hands are.
 
-### We refuse subscription gates.
+### We stand for sustained work.
 
-AXEM-SX is free of charge and free in the four-freedoms sense. There
-is no "Pro features" tier behind a paywall. There is no part of the
-system you must subscribe to in order to use. The Pro, Light, and
-Gold editions are *curatorial* differences, not commercial ones.
+Value flows from the work itself, not from gates placed around it.
+AXEM-SX is free of charge and free in the four-freedoms sense — every
+part of the system is yours to use, study, modify, and share. The
+Pro, Light, and Gold editions are *curatorial* differences, not
+commercial tiers. Our work is supported by people who choose to
+support it, on their own terms.
 
 ---
 

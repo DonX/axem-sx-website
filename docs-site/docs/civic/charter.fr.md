@@ -2,7 +2,7 @@
 title: La Charte civique
 description: >-
   La version courte de la philosophie derrière AXEM-SX — ce que nous
-  promettons, ce que nous refusons, et pourquoi nous l'avons construit.
+  promettons, ce que nous défendons, et pourquoi nous l'avons construit.
 ---
 
 # La Charte civique
@@ -91,32 +91,36 @@ d'elles disparaît, nous avons un chemin pour en sortir.
 
 ---
 
-## Trois refus
+## Trois engagements
 
-### Nous refusons « l'engagement » comme métrique.
+### Nous défendons l'informatique sereine.
 
-AXEM-SX n'a pas de centre de notifications pour elle-même. Le bureau
-ne vous poussera pas à la noter, à la partager, ni à « compléter
-votre profil ». Le geste le plus respectueux qu'un logiciel peut faire,
-c'est de rester en dehors de votre chemin jusqu'à ce que vous le
-sollicitiez.
+Le logiciel, à son meilleur, est silencieux. AXEM-SX n'a pas de
+centre de notifications pour elle-même. Le bureau ne vous poussera
+pas à la noter, à la partager, ni à « compléter votre profil ».
+Votre attention appartient à votre travail — et le geste le plus
+respectueux qu'un logiciel peut faire, c'est de rester en dehors
+de votre chemin jusqu'à ce que vous le sollicitiez.
 
-### Nous refusons « le cloud » comme défaut.
+### Nous défendons l'autonomie locale.
 
-Les services cloud sont utiles. Les services cloud comme couche de
-*stockage par défaut, synchronisation par défaut, sauvegarde par
-défaut, authentification par défaut* d'un ordinateur personnel — c'est
-une position prise en votre nom sans votre consentement. AXEM-SX prend
-la position opposée par défaut, et rend les alternatives au goût cloud
-faciles à ajouter quand vous les choisissez.
+Votre machine est le siège de l'autorité pour votre propre travail.
+Le stockage, la synchronisation, la sauvegarde et l'authentification
+fonctionnent localement par défaut — parce que ce sont des décisions
+qui concernent vos données, et qu'elles vous appartiennent. Les
+services cloud restent franchement utiles, et AXEM-SX rend les
+alternatives au goût cloud faciles à ajouter quand vous les
+choisissez. Le défaut se trouve simplement là où sont vos mains.
 
-### Nous refusons les barrières d'abonnement.
+### Nous défendons le travail soutenu.
 
-AXEM-SX est gratuite, et libre au sens des quatre libertés. Il n'y a
-pas de niveau « fonctionnalités Pro » derrière un péage. Il n'y a
-aucune partie du système à laquelle vous devez vous abonner pour
-l'utiliser. Les éditions Pro, Light et Gold sont des différences
-*curatoriales*, pas commerciales.
+La valeur découle du travail lui-même, et non des barrières qu'on
+mettrait autour. AXEM-SX est gratuite, et libre au sens des quatre
+libertés — chaque partie du système est à vous pour l'utiliser,
+l'étudier, la modifier et la partager. Les éditions Pro, Light et
+Gold sont des différences *curatoriales*, pas des paliers
+commerciaux. Notre travail est soutenu par celles et ceux qui
+choisissent de le soutenir, à leurs propres conditions.
 
 ---
 
