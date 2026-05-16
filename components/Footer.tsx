@@ -57,7 +57,7 @@ export default function Footer() {
           <span className="text-[10px] tracking-widest uppercase text-amber-400/50 font-semibold">{t('footer.project')}</span>
           <ul className="flex flex-col gap-3 text-sm text-white/55 tracking-wide">
             {[
-              { labelKey: 'footer.community', href: '#community', external: false },
+              { labelKey: 'footer.community', href: 'https://docs.axem-sx.org/civic/community/', external: true },
               { labelKey: 'footer.documentation', href: 'https://docs.axem-sx.org', external: true },
             ].map((item) => (
               <li key={item.href}>
