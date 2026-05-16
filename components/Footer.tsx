@@ -57,14 +57,25 @@ export default function Footer() {
           <span className="text-[10px] tracking-widest uppercase text-amber-400/50 font-semibold">{t('footer.project')}</span>
           <ul className="flex flex-col gap-3 text-sm text-white/55 tracking-wide">
             {[
-              { labelKey: 'footer.community', href: '#community' },
-              { labelKey: 'footer.documentation', href: '#docs' },
+              { labelKey: 'footer.community', href: '#community', external: false },
+              { labelKey: 'footer.documentation', href: 'https://docs.axem-sx.org', external: true },
             ].map((item) => (
               <li key={item.href}>
-                <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
-                  {t(item.labelKey)}
-                  <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
-                </span>
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/55 hover:text-amber-300 transition-colors duration-200 flex items-center gap-2 justify-center md:justify-start"
+                  >
+                    {t(item.labelKey)}
+                  </a>
+                ) : (
+                  <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
+                    {t(item.labelKey)}
+                    <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
+                  </span>
+                )}
               </li>
             ))}
           </ul>
