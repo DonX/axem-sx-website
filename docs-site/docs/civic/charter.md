@@ -133,14 +133,15 @@ Nothing required. But if any of this resonates:
 ## Who we are
 
 AXEM-SX is a project of **[Golda-Global Inc.](https://golda.global)**,
-a civic-software company. We are a small team. We do not take outside
-investment that comes with strings. Our work is meant to outlast our
-attention to it.
+a civic-software company. We are a small team. Our work is supported
+by those who share its intent, never by capital that comes with
+conditions. It is meant to outlast our attention to it.
 
 ---
 
 *This Charter is a living document. It will be updated when our
-practice changes. It will not be updated to soften it.*
+practice changes. It will deepen with experience; it will not be
+softened for convenience.*
 
 ---
 

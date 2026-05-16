@@ -143,8 +143,9 @@ Rien d'obligatoire. Mais si quelque chose ici vous parle :
 
 AXEM-SX est un projet de **[Golda-Global Inc.](https://golda.global)**,
 une société de logiciels civiques. Nous sommes une petite équipe.
-Nous ne prenons pas d'investissement extérieur qui vienne avec des
-conditions. Notre travail est destiné à survivre à notre attention.
+Notre travail est soutenu par celles et ceux qui en partagent
+l'intention, jamais par des capitaux assortis de conditions. Il est
+destiné à survivre à notre attention.
 
 ---
 
@@ -161,4 +162,5 @@ conditions. Notre travail est destiné à survivre à notre attention.
 ---
 
 *Cette Charte est un document vivant. Elle sera mise à jour quand
-notre pratique change. Elle ne sera pas mise à jour pour s'adoucir.*
+notre pratique change. Elle s'approfondira avec l'expérience ; elle
+ne sera pas adoucie par confort.*
