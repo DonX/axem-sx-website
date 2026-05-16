@@ -3,7 +3,7 @@
 The official documentation portal for **AXEM-SX**, a sovereignty-focused
 Linux distribution based on openSUSE Leap.
 
-Live at: **https://docs.axem-sx.com** (deployed via GitHub Pages).
+Live at: **https://docs.axem-sx.org** (deployed via GitHub Pages).
 
 Built with [MkDocs](https://www.mkdocs.org/) and the
 [Material](https://squidfunk.github.io/mkdocs-material/) theme.
@@ -104,7 +104,7 @@ Deployed via **GitHub Pages** by the path-scoped workflow at
 [`.github/workflows/docs-deploy.yml`](../.github/workflows/docs-deploy.yml).
 
 - **Production**: every push to `main` that touches `docs-site/**`
-  triggers a build + deploy → https://docs.axem-sx.com
+  triggers a build + deploy → https://docs.axem-sx.org
 - **PR previews**: pull requests touching `docs-site/**` run the build
   in `--strict` mode; the artifact is available for inspection but is
   not published.
@@ -112,11 +112,11 @@ Deployed via **GitHub Pages** by the path-scoped workflow at
 ### One-time setup (already done)
 
 1. Repository settings → **Pages** → Source: **GitHub Actions**.
-2. Repository settings → **Pages** → Custom domain: `docs.axem-sx.com`,
+2. Repository settings → **Pages** → Custom domain: `docs.axem-sx.org`,
    Enforce HTTPS enabled.
-3. DNS provider: `CNAME docs.axem-sx.com → DonX.github.io.`
+3. DNS provider: `CNAME docs.axem-sx.org → DonX.github.io.`
 4. The `axem-sx-website` Vercel project continues to serve the apex
-   `axem-sx.com`. The two deploys do not interfere.
+   `axem-sx.org`. The two deploys do not interfere.
 
 ---
 

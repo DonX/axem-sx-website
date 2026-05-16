@@ -19,7 +19,7 @@ de démarrer depuis un USB.
 
 ## Étape 1 — Téléchargez une ISO
 
-Allez sur **[axem-sx.com/downloads](https://axem-sx.com/downloads)** et
+Allez sur **[axem-sx.org/downloads](https://axem-sx.org/downloads)** et
 choisissez une édition :
 
 | Édition | Choisissez celle-ci si... |

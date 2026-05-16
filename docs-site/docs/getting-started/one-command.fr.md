@@ -43,7 +43,7 @@ Hub — pour cette édition.
     Le manifeste complet par édition vivra ici, ventilé par catégorie
     — productivité, création, développement, codecs, polices. En
     attendant, voyez les [notes de version
-    1.0.1](https://axem-sx.com/release-notes) sur le site web pour le
+    1.0.1](https://axem-sx.org/release-notes) sur le site web pour le
     résumé général.
 
 ## Pourquoi des ISO légères, au juste ?

@@ -19,7 +19,7 @@ can boot from USB.
 
 ## Step 1 — Download an ISO
 
-Go to **[axem-sx.com/downloads](https://axem-sx.com/downloads)** and
+Go to **[axem-sx.org/downloads](https://axem-sx.org/downloads)** and
 pick an edition:
 
 | Edition | Pick this if... |

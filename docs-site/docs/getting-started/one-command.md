@@ -40,7 +40,7 @@ modules — for that edition.
     The full per-edition manifest will live here, broken down by
     category — productivity, creative, development, codecs, fonts.
     Until it's published, see the
-    [release notes for 1.0.1](https://axem-sx.com/release-notes) on
+    [release notes for 1.0.1](https://axem-sx.org/release-notes) on
     the website for the high-level summary.
 
 ## Why slim ISOs at all?
