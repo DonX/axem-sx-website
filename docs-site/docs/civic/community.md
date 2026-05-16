@@ -11,19 +11,21 @@ of them does.
 
 ## Joining the conversation
 
-- **Questions** →
-  [GitHub Discussions › Q&A](https://github.com/DonX/axem-sx-website/discussions/categories/q-a).
-  Public, searchable, async. Other users with the same question
-  benefit from your asking.
-- **Ideas** →
-  [GitHub Discussions › Ideas](https://github.com/DonX/axem-sx-website/discussions/categories/ideas).
-  No promises and no roadmap. Good ideas get acknowledged.
-- **Bugs** →
-  [GitHub Issues](https://github.com/DonX/axem-sx-website/issues).
-  Please include AXEM-SX version, what you tried, what happened,
-  what you expected.
+The public channel right now is
+**[GitHub Issues](https://github.com/DonX/axem-sx-website/issues)** —
+primarily for bugs, but well-formed questions and ideas are welcome
+there too. One queue, easy to follow, easy to search.
 
-English and French are both welcome everywhere.
+For a bug report, please include the AXEM-SX version, what you
+tried, what happened, and what you expected.
+
+As the project grows, we may add dedicated channels for questions
+and ideas. We will not add them before we can sustain them — an
+empty forum is a worse signal than no forum at all.
+
+For anything more personal, our email is further down this page.
+
+English and French are both welcome.
 
 ## Contributing
 

@@ -11,20 +11,24 @@ une seule en demande.
 
 ## Rejoindre la conversation
 
-- **Questions** →
-  [GitHub Discussions › Q&R](https://github.com/DonX/axem-sx-website/discussions/categories/q-a).
-  Public, indexable, asynchrone. D'autres utilisateurs avec la
-  même question bénéficient de votre démarche.
-- **Idées** →
-  [GitHub Discussions › Idées](https://github.com/DonX/axem-sx-website/discussions/categories/ideas).
-  Aucune promesse, aucune feuille de route. Les bonnes idées
-  reçoivent un accusé de réception.
-- **Bugs** →
-  [GitHub Issues](https://github.com/DonX/axem-sx-website/issues).
-  Merci d'inclure la version d'AXEM-SX, ce que vous avez tenté,
-  ce qui s'est passé, ce que vous attendiez.
+Le canal public, pour l'instant, est
+**[GitHub Issues](https://github.com/DonX/axem-sx-website/issues)** —
+principalement pour les bugs, mais les questions et les idées bien
+formulées y sont aussi les bienvenues. Une seule file, facile à
+suivre, facile à chercher.
 
-L'anglais et le français sont les bienvenus partout.
+Pour un rapport de bug, merci d'inclure la version d'AXEM-SX, ce
+que vous avez tenté, ce qui s'est passé, et ce que vous attendiez.
+
+Au fil de la croissance du projet, nous ajouterons peut-être des
+canaux dédiés aux questions et aux idées. Nous ne les ajouterons
+pas avant d'être sûrs de pouvoir les soutenir — un forum vide est
+un pire signal que pas de forum du tout.
+
+Pour quelque chose de plus personnel, notre courriel est plus bas
+sur cette page.
+
+L'anglais et le français sont les bienvenus.
 
 ## Contribuer
 

@@ -52,10 +52,10 @@ tell us. Vendor, model, kernel version, what worked, what didn't.
 - **New ISO editions or remixes.** The Pro, Light, and Gold
   editions are deliberate; we are not entertaining additions in
   the 1.x line.
-- **Major feature requests.** Use Discussions › Ideas. We read
-  them. We rarely promise.
+- **Major feature requests.** Open an issue and frame it as an
+  idea. We read them. We rarely promise.
 - **Packaging requests** ("please add X to the default set") —
-  same channel: Discussions › Ideas, not Issues.
+  same channel: an issue framed as a request, not as a bug.
 - **Replacing curated choices.** AXEM-SX is opinionated by
   design; if a default does not suit you, the
   [Make it Yours](https://docs.axem-sx.org/make-it-yours/)
