@@ -36,9 +36,7 @@ request etiquette — see
 [CONTRIBUTING.md](https://github.com/DonX/axem-sx-website/blob/main/CONTRIBUTING.md)
 in the repository.
 
-By participating, you agree to the
-[Code of Conduct](https://github.com/DonX/axem-sx-website/blob/main/CODE_OF_CONDUCT.md)
-(Contributor Covenant v2.1). The short version: be respectful,
+The short version of how we work together: be respectful,
 assume good faith, focus on the work.
 
 ## Translations

@@ -38,10 +38,8 @@ sujet, l'étiquette des pull requests — voyez
 [CONTRIBUTING.md](https://github.com/DonX/axem-sx-website/blob/main/CONTRIBUTING.md)
 dans le dépôt.
 
-En participant, vous acceptez le
-[Code de conduite](https://github.com/DonX/axem-sx-website/blob/main/CODE_OF_CONDUCT.md)
-(Contributor Covenant v2.1). En résumé : respect, présomption
-de bonne foi, concentration sur le travail.
+En résumé, voici notre façon de travailler ensemble : respect,
+présomption de bonne foi, concentration sur le travail.
 
 ## Traductions
 
