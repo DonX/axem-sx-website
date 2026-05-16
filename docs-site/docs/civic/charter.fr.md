@@ -137,7 +137,7 @@ Rien d'obligatoire. Mais si quelque chose ici vous parle :
 
 ## Qui nous sommes
 
-AXEM-SX est un projet de **[Golda-Global Inc.](https://axem-sx.com)**,
+AXEM-SX est un projet de **[Golda-Global Inc.](https://golda.global)**,
 une société de logiciels civiques. Nous sommes une petite équipe.
 Nous ne prenons pas d'investissement extérieur qui vienne avec des
 conditions. Notre travail est destiné à survivre à notre attention.

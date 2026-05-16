@@ -129,7 +129,7 @@ Nothing required. But if any of this resonates:
 
 ## Who we are
 
-AXEM-SX is a project of **[Golda-Global Inc.](https://axem-sx.com)**,
+AXEM-SX is a project of **[Golda-Global Inc.](https://golda.global)**,
 a civic-software company. We are a small team. We do not take outside
 investment that comes with strings. Our work is meant to outlast our
 attention to it.
