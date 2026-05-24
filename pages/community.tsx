@@ -180,7 +180,7 @@ export default function CommunityPage() {
                   {t('sponsorsButton')}
                 </a>
                 <a
-                  href="https://www.paypal.me/GoldaGlobal"
+                  href="https://www.paypal.com/qrcodes/managed/0aa62fd2-d474-4ae9-9c55-ce4b94d60c3d?utm_source=consweb_more"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-[#1a1612] border border-white/10 hover:border-amber-400/50 text-white/80 hover:text-white font-bold text-sm tracking-wider uppercase transition-all duration-200 text-center"
