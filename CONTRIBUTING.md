@@ -34,18 +34,20 @@ Open them at [Issues](https://github.com/DonX/axem-sx-website/issues).
 
 ### Translations
 
-The documentation is bilingual (English / French) by design. If
-you spot a French page that reads awkwardly, or an English page
-without its French sibling, an issue or PR is welcome.
-
-We do not currently accept new language additions beyond EN/FR —
-we would rather keep two languages excellent than five mediocre.
+The documentation is bilingual (English / French) by design. However, we welcome contributions to translate our documentation and system tools into **Haitian Creole (kreyòl ayisyen)** to make our civic tech accessible to Creole-speaking communities. If you spot an issue with English or French text, or wish to submit a translation patch for Creole, a pull request is highly welcome.
 
 ### Hardware reports
 
 If AXEM-SX runs (or doesn't run) on hardware not currently listed
 in the [Hardware Lab](https://docs.axem-sx.org/hardware-lab/),
 tell us. Vendor, model, kernel version, what worked, what didn't.
+
+### Package Maintenance & OBS Recipes
+
+AXEM-SX maintains a curated set of around 30 custom packages on the Open Build Service (OBS). We welcome contributions to these recipes:
+- Submitting RPM `.spec` file improvements or version bumps.
+- Resolving build failures in the local or remote OBS build chroots.
+- Frame packaging ideas as an issue or submit a pull request with the spec and source patches.
 
 ## What is currently out of scope
 
@@ -54,8 +56,7 @@ tell us. Vendor, model, kernel version, what worked, what didn't.
   the 1.x line.
 - **Major feature requests.** Open an issue and frame it as an
   idea. We read them. We rarely promise.
-- **Packaging requests** ("please add X to the default set") —
-  same channel: an issue framed as a request, not as a bug.
+- **Unfocused packaging requests** ("please add X package" without a spec file, build instructions, or community utility). We prefer requests that include a draft spec file or demonstrate clear demand.
 - **Replacing curated choices.** AXEM-SX is opinionated by
   design; if a default does not suit you, the
   [Make it Yours](https://docs.axem-sx.org/make-it-yours/)

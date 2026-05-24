@@ -49,6 +49,7 @@ export default function Navbar() {
             { label: t('nav.features'), href: '/features' },
             { label: t('nav.about'), href: '/about' },
             { label: t('nav.releaseNotes'), href: '/release-notes' },
+            { label: t('nav.community'), href: '/community' },
           ].map((item) => (
             <li key={item.href}>
               <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
@@ -120,6 +121,7 @@ export default function Navbar() {
             { label: t('nav.features'), href: '/features' },
             { label: t('nav.about'), href: '/about' },
             { label: t('nav.releaseNotes'), href: '/release-notes' },
+            { label: t('nav.community'), href: '/community' },
           ].map((item) => (
             <Link
               key={item.href}

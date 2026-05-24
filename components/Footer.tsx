@@ -42,6 +42,7 @@ export default function Footer() {
               { labelKey: 'nav.features', href: '/features' },
               { labelKey: 'nav.about', href: '/about' },
               { labelKey: 'nav.releaseNotes', href: '/release-notes' },
+              { labelKey: 'nav.community', href: '/community' },
             ].map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="hover:text-amber-400 transition-colors duration-200">
@@ -57,7 +58,7 @@ export default function Footer() {
           <span className="text-[10px] tracking-widest uppercase text-amber-400/50 font-semibold">{t('footer.project')}</span>
           <ul className="flex flex-col gap-3 text-sm text-white/55 tracking-wide">
             {[
-              { labelKey: 'footer.community', href: 'https://docs.axem-sx.org/civic/community/', external: true },
+              { labelKey: 'footer.community', href: '/community', external: false },
               { labelKey: 'footer.documentation', href: 'https://docs.axem-sx.org', external: true },
             ].map((item) => (
               <li key={item.href}>
@@ -71,10 +72,12 @@ export default function Footer() {
                     {t(item.labelKey)}
                   </a>
                 ) : (
-                  <span className="text-white/35 cursor-default flex items-center gap-2 justify-center md:justify-start">
+                  <Link
+                    href={item.href}
+                    className="text-white/55 hover:text-amber-300 transition-colors duration-200 flex items-center gap-2 justify-center md:justify-start"
+                  >
                     {t(item.labelKey)}
-                    <span className="text-[9px] uppercase tracking-widest text-amber-400/40 font-mono">({t('footer.toCome')})</span>
-                  </span>
+                  </Link>
                 )}
               </li>
             ))}
