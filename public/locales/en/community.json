@@ -23,5 +23,8 @@
   "sponsorsButton": "Sponsor on GitHub",
   "sponsorsPaypal": "Donate via PayPal",
   "etiquetteTitle": "Community Etiquette",
-  "etiquetteText": "We follow a restrained, quiet support model: 'Patient releases, quiet maintenance.' Expect responses in days, not hours. Respect, patience, and clear details help keep the workshop running smoothly."
+  "etiquetteText": "We follow a restrained, quiet support model: 'Patient releases, quiet maintenance.' Expect responses in days, not hours. Respect, patience, and clear details help keep the workshop running smoothly.",
+  "discordHeading": "Join the Discord Hangout",
+  "discordSub": "Connect with other AXEM-SX creators, share your custom desktop setups, and get peer-to-peer support. New members land directly in #general.",
+  "discordButton": "Join our Discord"
 }

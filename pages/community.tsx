@@ -25,16 +25,30 @@ export default function CommunityPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setStatus('loading');
     
-    // Simulate submission loop
-    setTimeout(() => {
-      setStatus('success');
-      setEmail('');
-    }, 1200);
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error('Subscription error:', err);
+      setStatus('error');
+    }
   };
 
   return (
@@ -55,39 +69,79 @@ export default function CommunityPage() {
       <div className="w-full px-6 py-20">
         <div className="max-w-5xl mx-auto flex flex-col gap-24">
 
-          {/* Newsletter Section */}
-          <Section title={t('newsletterHeading')}>
-            <div className="max-w-2xl mx-auto flex flex-col gap-6 items-center">
-              <p className="text-white/60 text-base leading-relaxed text-center">
-                {t('newsletterSub')}
-              </p>
-              
+          {/* Join our Channels (Newsletter + Discord) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mt-4">
+            
+            {/* Newsletter Column */}
+            <div className="p-8 rounded-2xl bg-white/5 border border-amber-400/10 flex flex-col gap-6 justify-between hover:border-amber-400/20 transition-all duration-300">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-amber-400" />
+                  <h2 className="text-xl md:text-2xl font-bold text-white">{t('newsletterHeading')}</h2>
+                </div>
+                <p className="text-sm text-white/55 leading-relaxed">
+                  {t('newsletterSub')}
+                </p>
+              </div>
+
               {status === 'success' ? (
-                <div className="w-full p-4 rounded-xl border border-green-500/30 bg-green-500/5 text-green-400 font-semibold text-center animate-fade-in">
+                <div className="p-4 rounded-xl border border-green-500/30 bg-green-500/5 text-green-400 font-semibold text-center">
                   ✓ {t('newsletterSuccess')}
                 </div>
               ) : (
-                <form onSubmit={handleSubscribe} className="w-full flex flex-col sm:flex-row gap-3 mt-2">
+                <form onSubmit={handleSubscribe} className="flex flex-col gap-3 mt-2">
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={t('newsletterEmail')}
-                    className="flex-1 px-4 py-3 rounded-lg border border-amber-400/25 bg-white/5 text-white placeholder-white/30 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg border border-amber-400/25 bg-white/5 text-white placeholder-white/30 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all text-sm"
                     disabled={status === 'loading'}
                   />
+                  {status === 'error' && (
+                    <span className="text-xs text-red-400 font-semibold">An error occurred. Please try again.</span>
+                  )}
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="px-8 py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-wider uppercase transition-all duration-200 shadow-md hover:shadow-amber-400/30 shrink-0 cursor-pointer disabled:opacity-50"
+                    className="w-full px-8 py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm tracking-wider uppercase transition-all duration-200 shadow-md hover:shadow-amber-400/30 cursor-pointer disabled:opacity-50"
                   >
                     {status === 'loading' ? '...' : t('newsletterButton')}
                   </button>
                 </form>
               )}
             </div>
-          </Section>
+
+            {/* Discord Column */}
+            <div className="p-8 rounded-2xl bg-white/5 border border-amber-400/10 flex flex-col gap-6 justify-between hover:border-amber-400/20 transition-all duration-300">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-indigo-500" />
+                  <h2 className="text-xl md:text-2xl font-bold text-white">{t('discordHeading')}</h2>
+                </div>
+                <p className="text-sm text-white/55 leading-relaxed">
+                  {t('discordSub')}
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 mt-2">
+                <div className="p-4 rounded-xl border border-indigo-500/20 bg-indigo-500/5 flex items-center justify-between text-xs text-indigo-300">
+                  <span>📍 Target channel: #general</span>
+                  <span className="font-mono bg-indigo-500/20 px-2 py-0.5 rounded text-[10px]">VERIFIED INVITE</span>
+                </div>
+                <a
+                  href="https://discord.gg/nGWpqtGnG9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm tracking-wider uppercase transition-all duration-200 text-center shadow-md hover:shadow-indigo-500/30"
+                >
+                  {t('discordButton')}
+                </a>
+              </div>
+            </div>
+
+          </div>
 
           {/* Contribution Grid Section */}
           <Section title={t('contributeTitle')}>

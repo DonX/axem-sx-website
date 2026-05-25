@@ -22,6 +22,9 @@
   "sponsorsText": "Si vous souhaitez soutenir financièrement le projet pour couvrir les serveurs de build, les enregistrements de domaine et les coûts d'hébergement, vous pouvez nous parrainer.",
   "sponsorsButton": "Parrainer sur GitHub",
   "sponsorsPaypal": "Faire un don via PayPal",
-  "etiquetteTitle": "Étiquette de la communauté",
-  "etiquetteText": "Nous suivons un modèle de support calme et restreint : 'Sorties patientes, maintenance tranquille'. Attendez-vous à des réponses en plusieurs jours, pas en quelques heures. Le respect, la patience et des explications claires aident à faire tourner l'atelier en douceur."
+  "etiquetteTitle": "Éthique de la communauté",
+  "etiquetteText": "Nous suivons un modèle de support calme et restreint : 'Sorties patientes, maintenance tranquille'. Attendez-vous à des réponses en plusieurs jours, pas en quelques heures. Le respect, la patience et des explications claires aident à faire tourner l'atelier en douceur.",
+  "discordHeading": "Rejoindre le salon Discord",
+  "discordSub": "Connectez-vous avec d'autres créateurs AXEM-SX, partagez vos configurations de bureau personnalisées et obtenez de l'aide de vos pairs. Les nouveaux membres arrivent directement dans #general.",
+  "discordButton": "Rejoindre notre Discord"
 }
