@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 
-  const { email } = req.body;
+  const { email, locale } = req.body;
 
   if (!email || typeof email !== 'string' || !email.includes('@')) {
     return res.status(400).json({ error: 'Invalid email address' });
@@ -30,6 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       body: JSON.stringify({
         email: email.trim(),
         unsubscribed: false,
+        properties: {
+          locale: typeof locale === 'string' ? locale.trim() : 'en'
+        }
       }),
     });
 

@@ -3,6 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import type { GetStaticProps } from 'next';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: { ...(await serverSideTranslations(locale ?? 'en', ['common', 'community'])) },
@@ -22,6 +24,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function CommunityPage() {
   const { t } = useTranslation('community');
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -36,7 +39,7 @@ export default function CommunityPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale: router.locale }),
       });
       
       if (response.ok) {
