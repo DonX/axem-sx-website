@@ -31,7 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         email: email.trim(),
         unsubscribed: false,
         properties: {
-          locale: typeof locale === 'string' ? locale.trim() : 'en'
+          locale: typeof locale === 'string' ? locale.trim() : 'en',
+          site: 'axem-sx.org'
         }
       }),
     });
